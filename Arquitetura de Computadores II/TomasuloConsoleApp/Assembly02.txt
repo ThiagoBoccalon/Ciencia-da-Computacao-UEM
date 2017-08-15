@@ -1,0 +1,8 @@
+j #2
+addi R1 R0 #7
+sw R0 #12(R0)
+lw R1 #12(R0)
+sub R8 R0 R0
+addi R5 #-1 R0
+mul R6 R0 R5
+beq R6 R6 #1
