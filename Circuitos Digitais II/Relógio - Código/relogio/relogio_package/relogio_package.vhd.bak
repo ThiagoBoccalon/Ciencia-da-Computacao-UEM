@@ -1,0 +1,24 @@
+Library ieee;
+Use ieee.std_logic_1164.all;
+Package relogio_package is
+Component segundos is
+	PORT(clk, clr : in std_logic;
+		change : out boolean;
+		un,dez :  buffer integer range 0 to 9);
+end component;
+Component minutos is
+	PORT(clr : in std_logic;
+		change1 : buffer boolean;
+		change2 : out boolean;
+		un,dez :  buffer integer range 0 to 9);
+end component;
+Component horas is
+	PORT(clr : in std_logic;
+		change2 : buffer boolean;
+		un,dez :  buffer integer range 0 to 9);
+end component;
+Component decodificador_bcd is
+	PORT(dado : in integer range 0 to 9;
+		 display : out bit_vector(6 downto 0)); --a,b,c,d,e,f,g
+end component;
+end relogio_package;

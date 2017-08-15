@@ -1,0 +1,240 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+33
+3700
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+mentor.lmf
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SOMADOR
+# storage
+db|ULA.(1).cnf
+db|ULA.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|thiago|desktop|worktrabalho|worktrabalho|somador|somador.vhd
+2b2aea982f59e7b33e9e2bb477d7bd8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a_b_cin)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(s_cout)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+SOMADOR:P1
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+SUBTRATOR
+# storage
+db|ULA.(2).cnf
+db|ULA.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|thiago|desktop|worktrabalho|worktrabalho|subtrator|subtrator.vhd
+4037b1aee2b9949b55fa436d3d91a1a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(en_sub)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(s_cout)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+SUBTRATOR:P2
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+DECODIFICADOR_3x8
+# storage
+db|ULA.(3).cnf
+db|ULA.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|thiago|desktop|worktrabalho|worktrabalho|decodificador_3x8|decodificador_3x8.vhd
+777ab980d7a40c7bca19e28c782834
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(sel)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+DECODIFICADOR_3x8:P3
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+PORTAS_LOGICAS
+# storage
+db|ULA.(4).cnf
+db|ULA.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|thiago|desktop|worktrabalho|worktrabalho|portas_logicas|portas_logicas.vhd
+c5d5978eac3857a4f8f73de5953fc6a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a_b_cin)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(saida_deco)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(s_cout)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(s_cout2)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+PORTAS_LOGICAS:P4
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ULA
+# storage
+db|ULA.(0).cnf
+db|ULA.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ula.vhd
+5cd91b4fc6b275292c42092b71f69
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|users|thiago|desktop|worktrabalho|worktrabalho|blocos_package|blocos_package.vhd
+92b36e6ff7798d38a8d9f7bef3ee6ee2
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

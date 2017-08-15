@@ -1,0 +1,1390 @@
+TimeQuest Timing Analyzer report for relogio
+Sun Jun 02 12:18:08 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1100mV 85C Model Fmax Summary
+  6. Slow 1100mV 85C Model Setup Summary
+  7. Slow 1100mV 85C Model Hold Summary
+  8. Slow 1100mV 85C Model Recovery Summary
+  9. Slow 1100mV 85C Model Removal Summary
+ 10. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 11. Setup Times
+ 12. Hold Times
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Slow 1100mV 85C Model Metastability Report
+ 16. Slow 1100mV 0C Model Fmax Summary
+ 17. Slow 1100mV 0C Model Setup Summary
+ 18. Slow 1100mV 0C Model Hold Summary
+ 19. Slow 1100mV 0C Model Recovery Summary
+ 20. Slow 1100mV 0C Model Removal Summary
+ 21. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 22. Setup Times
+ 23. Hold Times
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Slow 1100mV 0C Model Metastability Report
+ 27. Fast 1100mV 0C Model Setup Summary
+ 28. Fast 1100mV 0C Model Hold Summary
+ 29. Fast 1100mV 0C Model Recovery Summary
+ 30. Fast 1100mV 0C Model Removal Summary
+ 31. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Fast 1100mV 0C Model Metastability Report
+ 37. Multicorner Timing Analysis Summary
+ 38. Setup Times
+ 39. Hold Times
+ 40. Clock to Output Times
+ 41. Minimum Clock to Output Times
+ 42. Board Trace Model Assignments
+ 43. Input Transition Times
+ 44. Slow Corner Signal Integrity Metrics
+ 45. Fast Corner Signal Integrity Metrics
+ 46. Setup Transfers
+ 47. Hold Transfers
+ 48. Recovery Transfers
+ 49. Removal Transfers
+ 50. Report TCCS
+ 51. Report RSKM
+ 52. Unconstrained Paths
+ 53. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; relogio                                                        ;
+; Device Family      ; Stratix III                                                    ;
+; Device Name        ; EP3SE50F484C2                                                  ;
+; Timing Models      ; Final                                                          ;
+; Delay Model        ; Combined                                                       ;
+; Rise/Fall Delays   ; Enabled                                                        ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                 ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; Clock Name         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; clk                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                ;
+; clr                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clr }                ;
+; minutos:P2|change2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { minutos:P2|change2 } ;
+; segundos:P1|change ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { segundos:P1|change } ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name         ; Note                                                  ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+; 69.51 MHz  ; 69.51 MHz       ; segundos:P1|change ;                                                       ;
+; 118.54 MHz ; 118.54 MHz      ; clr                ;                                                       ;
+; 141.8 MHz  ; 141.8 MHz       ; minutos:P2|change2 ;                                                       ;
+; 837.52 MHz ; 616.52 MHz      ; clk                ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary          ;
++--------------------+---------+---------------+
+; Clock              ; Slack   ; End Point TNS ;
++--------------------+---------+---------------+
+; segundos:P1|change ; -14.437 ; -77.793       ;
+; minutos:P2|change2 ; -8.627  ; -49.140       ;
+; clr                ; -7.436  ; -36.830       ;
+; clk                ; -0.194  ; -0.449        ;
++--------------------+---------+---------------+
+
+
++---------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary          ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clr                ; -3.281 ; -17.514       ;
+; segundos:P1|change ; -2.231 ; -6.399        ;
+; minutos:P2|change2 ; -0.292 ; -0.756        ;
+; clk                ; 0.320  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary       ;
++--------------------+---------+---------------+
+; Clock              ; Slack   ; End Point TNS ;
++--------------------+---------+---------------+
+; segundos:P1|change ; -12.157 ; -72.190       ;
+; minutos:P2|change2 ; -7.287  ; -42.942       ;
+; clr                ; -7.202  ; -32.203       ;
+; clk                ; -0.658  ; -4.606        ;
++--------------------+---------+---------------+
+
+
++---------------------------------------------+
+; Slow 1100mV 85C Model Removal Summary       ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clr                ; -3.761 ; -20.156       ;
+; segundos:P1|change ; -2.711 ; -7.979        ;
+; minutos:P2|change2 ; -0.628 ; -1.818        ;
+; clk                ; 0.378  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++---------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
++--------------------+--------+---------------------+
+; Clock              ; Slack  ; End Point TNS       ;
++--------------------+--------+---------------------+
+; segundos:P1|change ; -3.363 ; -57.579             ;
+; minutos:P2|change2 ; -0.765 ; -10.751             ;
+; clk                ; -0.369 ; -6.804              ;
+; clr                ; 0.294  ; 0.000               ;
++--------------------+--------+---------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; clr       ; clr                ; 3.106 ; 2.940 ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; 5.488 ; 5.365 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 7.602 ; 7.444 ; Fall       ; segundos:P1|change ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; clr       ; clr                ; 1.681  ; 1.761  ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; -1.304 ; -1.292 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 0.641  ; 0.721  ; Fall       ; segundos:P1|change ;
++-----------+--------------------+--------+--------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 9.214 ; 9.166 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 6.600 ; 6.556 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 6.621 ; 6.577 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 7.848 ; 8.041 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 7.748 ; 7.735 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 6.667 ; 6.621 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 9.214 ; 9.166 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 6.701 ; 6.708 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 2.675 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 2.605 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 5.147 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 5.026 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 5.904 ; 5.947 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 5.904 ; 5.981 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 5.972 ; 5.947 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 7.105 ; 7.270 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 7.058 ; 7.069 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 5.971 ; 5.988 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 8.458 ; 8.378 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 5.996 ; 6.018 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 2.503 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 2.433 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 4.851 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 4.733 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
+----------------------------------------------
+; Slow 1100mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name         ; Note                                                  ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+; 74.89 MHz  ; 74.89 MHz       ; segundos:P1|change ;                                                       ;
+; 125.93 MHz ; 125.93 MHz      ; clr                ;                                                       ;
+; 153.26 MHz ; 153.26 MHz      ; minutos:P2|change2 ;                                                       ;
+; 915.75 MHz ; 621.89 MHz      ; clk                ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary           ;
++--------------------+---------+---------------+
+; Clock              ; Slack   ; End Point TNS ;
++--------------------+---------+---------------+
+; segundos:P1|change ; -13.411 ; -72.368       ;
+; minutos:P2|change2 ; -7.945  ; -45.020       ;
+; clr                ; -6.941  ; -33.988       ;
+; clk                ; -0.092  ; -0.177        ;
++--------------------+---------+---------------+
+
+
++---------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary           ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clr                ; -2.985 ; -15.987       ;
+; segundos:P1|change ; -1.927 ; -5.538        ;
+; minutos:P2|change2 ; -0.198 ; -0.471        ;
+; clk                ; 0.297  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary        ;
++--------------------+---------+---------------+
+; Clock              ; Slack   ; End Point TNS ;
++--------------------+---------+---------------+
+; segundos:P1|change ; -11.369 ; -67.238       ;
+; clr                ; -6.734  ; -29.871       ;
+; minutos:P2|change2 ; -6.716  ; -39.401       ;
+; clk                ; -0.534  ; -3.738        ;
++--------------------+---------+---------------+
+
+
++---------------------------------------------+
+; Slow 1100mV 0C Model Removal Summary        ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clr                ; -3.454 ; -18.480       ;
+; segundos:P1|change ; -2.396 ; -7.054        ;
+; minutos:P2|change2 ; -0.504 ; -1.448        ;
+; clk                ; 0.424  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
++--------------------+--------+--------------------+
+; Clock              ; Slack  ; End Point TNS      ;
++--------------------+--------+--------------------+
+; segundos:P1|change ; -3.074 ; -52.325            ;
+; minutos:P2|change2 ; -0.685 ; -9.186             ;
+; clk                ; -0.369 ; -6.790             ;
+; clr                ; 0.311  ; 0.000              ;
++--------------------+--------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; clr       ; clr                ; 2.971 ; 2.818 ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; 5.178 ; 5.076 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 7.085 ; 6.939 ; Fall       ; segundos:P1|change ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; clr       ; clr                ; 1.482  ; 1.530  ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; -1.333 ; -1.341 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 0.434  ; 0.482  ; Fall       ; segundos:P1|change ;
++-----------+--------------------+--------+--------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 8.697 ; 8.665 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 6.215 ; 6.158 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 6.237 ; 6.181 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 7.367 ; 7.565 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 7.319 ; 7.261 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 6.280 ; 6.219 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 8.697 ; 8.665 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 6.322 ; 6.282 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 2.588 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 2.529 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 4.957 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 4.829 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 5.588 ; 5.601 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 5.588 ; 5.618 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 5.630 ; 5.601 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 6.697 ; 6.867 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 6.687 ; 6.648 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 5.653 ; 5.643 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 7.995 ; 7.960 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 5.681 ; 5.666 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 2.429 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 2.373 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 4.678 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 4.557 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
+---------------------------------------------
+; Slow 1100mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary           ;
++--------------------+---------+---------------+
+; Clock              ; Slack   ; End Point TNS ;
++--------------------+---------+---------------+
+; segundos:P1|change ; -10.000 ; -54.113       ;
+; minutos:P2|change2 ; -5.565  ; -31.222       ;
+; clr                ; -5.219  ; -24.410       ;
+; clk                ; 0.258   ; 0.000         ;
++--------------------+---------+---------------+
+
+
++---------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary           ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clr                ; -2.079 ; -11.247       ;
+; segundos:P1|change ; -1.240 ; -3.583        ;
+; minutos:P2|change2 ; -0.004 ; -0.004        ;
+; clk                ; 0.196  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary       ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; segundos:P1|change ; -8.663 ; -50.707       ;
+; clr                ; -5.148 ; -21.828       ;
+; minutos:P2|change2 ; -4.739 ; -27.396       ;
+; clk                ; -0.114 ; -0.798        ;
++--------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary        ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clr                ; -2.484 ; -13.223       ;
+; segundos:P1|change ; -1.645 ; -4.871        ;
+; minutos:P2|change2 ; -0.224 ; -0.639        ;
+; clk                ; 0.219  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
++--------------------+--------+--------------------+
+; Clock              ; Slack  ; End Point TNS      ;
++--------------------+--------+--------------------+
+; segundos:P1|change ; -2.100 ; -36.266            ;
+; clk                ; -0.343 ; -4.207             ;
+; minutos:P2|change2 ; -0.280 ; -3.376             ;
+; clr                ; 0.442  ; 0.000              ;
++--------------------+--------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; clr       ; clr                ; 2.323 ; 2.285 ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; 3.793 ; 3.808 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 5.436 ; 5.398 ; Fall       ; segundos:P1|change ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; clr       ; clr                ; 1.057  ; 1.051  ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; -1.145 ; -1.187 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 0.228  ; 0.222  ; Fall       ; segundos:P1|change ;
++-----------+--------------------+--------+--------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 6.617 ; 6.695 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 4.599 ; 4.601 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 4.614 ; 4.629 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 5.559 ; 5.606 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 5.472 ; 5.483 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 4.614 ; 4.639 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 6.617 ; 6.695 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 4.675 ; 4.677 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 1.886 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 1.861 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 3.745 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 3.789 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 4.228 ; 4.206 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 4.229 ; 4.206 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 4.228 ; 4.227 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 5.109 ; 5.154 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 5.054 ; 5.068 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 4.230 ; 4.237 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 6.144 ; 6.222 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 4.270 ; 4.271 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 1.763 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 1.739 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 3.533 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 3.574 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
+---------------------------------------------
+; Fast 1100mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                 ;
++---------------------+----------+---------+----------+---------+---------------------+
+; Clock               ; Setup    ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------+----------+---------+----------+---------+---------------------+
+; Worst-case Slack    ; -14.437  ; -3.281  ; -12.157  ; -3.761  ; -3.363              ;
+;  clk                ; -0.194   ; 0.196   ; -0.658   ; 0.219   ; -0.369              ;
+;  clr                ; -7.436   ; -3.281  ; -7.202   ; -3.761  ; 0.294               ;
+;  minutos:P2|change2 ; -8.627   ; -0.292  ; -7.287   ; -0.628  ; -0.765              ;
+;  segundos:P1|change ; -14.437  ; -2.231  ; -12.157  ; -2.711  ; -3.363              ;
+; Design-wide TNS     ; -164.212 ; -24.669 ; -151.941 ; -29.953 ; -75.134             ;
+;  clk                ; -0.449   ; 0.000   ; -4.606   ; 0.000   ; -6.804              ;
+;  clr                ; -36.830  ; -17.514 ; -32.203  ; -20.156 ; 0.000               ;
+;  minutos:P2|change2 ; -49.140  ; -0.756  ; -42.942  ; -1.818  ; -10.751             ;
+;  segundos:P1|change ; -77.793  ; -6.399  ; -72.190  ; -7.979  ; -57.579             ;
++---------------------+----------+---------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; clr       ; clr                ; 3.106 ; 2.940 ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; 5.488 ; 5.365 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 7.602 ; 7.444 ; Fall       ; segundos:P1|change ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise   ; Fall   ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+--------+--------+------------+--------------------+
+; clr       ; clr                ; 1.681  ; 1.761  ; Fall       ; clr                ;
+; clr       ; minutos:P2|change2 ; -1.145 ; -1.187 ; Fall       ; minutos:P2|change2 ;
+; clr       ; segundos:P1|change ; 0.641  ; 0.721  ; Fall       ; segundos:P1|change ;
++-----------+--------------------+--------+--------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 9.214 ; 9.166 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 6.600 ; 6.556 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 6.621 ; 6.577 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 7.848 ; 8.041 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 7.748 ; 7.735 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 6.667 ; 6.621 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 9.214 ; 9.166 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 6.701 ; 6.708 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 2.675 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 2.605 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 5.147 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 5.026 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; Data Port       ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+; dez_seg_bcd[*]  ; clk                ; 4.228 ; 4.206 ; Fall       ; clk                ;
+;  dez_seg_bcd[0] ; clk                ; 4.229 ; 4.206 ; Fall       ; clk                ;
+;  dez_seg_bcd[1] ; clk                ; 4.228 ; 4.227 ; Fall       ; clk                ;
+;  dez_seg_bcd[2] ; clk                ; 5.109 ; 5.154 ; Fall       ; clk                ;
+;  dez_seg_bcd[3] ; clk                ; 5.054 ; 5.068 ; Fall       ; clk                ;
+;  dez_seg_bcd[4] ; clk                ; 4.230 ; 4.237 ; Fall       ; clk                ;
+;  dez_seg_bcd[5] ; clk                ; 6.144 ; 6.222 ; Fall       ; clk                ;
+;  dez_seg_bcd[6] ; clk                ; 4.270 ; 4.271 ; Fall       ; clk                ;
+; change2         ; minutos:P2|change2 ; 1.763 ;       ; Rise       ; minutos:P2|change2 ;
+; change2         ; minutos:P2|change2 ;       ; 1.739 ; Fall       ; minutos:P2|change2 ;
+; change1         ; segundos:P1|change ; 3.533 ;       ; Rise       ; segundos:P1|change ;
+; change1         ; segundos:P1|change ;       ; 3.574 ; Fall       ; segundos:P1|change ;
++-----------------+--------------------+-------+-------+------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                      ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; Pin             ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; change1         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; change2         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_seg_bcd[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_seg_bcd[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_seg_bcd[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_seg_bcd[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_seg_bcd[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_seg_bcd[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_seg_bcd[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_seg_bcd[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_seg_bcd[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_seg_bcd[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_seg_bcd[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_seg_bcd[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_seg_bcd[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_seg_bcd[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_min_bcd[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_min_bcd[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_min_bcd[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_min_bcd[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_min_bcd[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_min_bcd[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_min_bcd[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_min_bcd[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_min_bcd[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_min_bcd[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_min_bcd[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_min_bcd[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_min_bcd[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_min_bcd[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_hora_bcd[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_hora_bcd[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_hora_bcd[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_hora_bcd[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_hora_bcd[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_hora_bcd[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; un_hora_bcd[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_hora_bcd[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_hora_bcd[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_hora_bcd[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_hora_bcd[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_hora_bcd[4] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_hora_bcd[5] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; dez_hora_bcd[6] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+
+
++-------------------------------------------------------------------+
+; Input Transition Times                                            ;
++----------------+--------------+-----------------+-----------------+
+; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++----------------+--------------+-----------------+-----------------+
+; clr            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~ ; 1.8 V        ; 1440 ps         ; 1440 ps         ;
++----------------+--------------+-----------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; change1         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; change2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; un_seg_bcd[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; un_seg_bcd[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; un_seg_bcd[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; un_seg_bcd[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; un_seg_bcd[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_seg_bcd[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; un_seg_bcd[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_seg_bcd[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_seg_bcd[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_seg_bcd[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; dez_seg_bcd[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; dez_seg_bcd[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; dez_seg_bcd[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; dez_seg_bcd[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_min_bcd[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; un_min_bcd[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_min_bcd[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; un_min_bcd[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_min_bcd[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; un_min_bcd[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_min_bcd[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; dez_min_bcd[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; dez_min_bcd[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; dez_min_bcd[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_min_bcd[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; dez_min_bcd[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; dez_min_bcd[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; dez_min_bcd[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_hora_bcd[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_hora_bcd[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; un_hora_bcd[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; un_hora_bcd[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_hora_bcd[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_hora_bcd[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; un_hora_bcd[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; dez_hora_bcd[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_hora_bcd[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-006 V                  ; 2.38 V              ; -0.00609 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-010 s                 ; 5.69e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-006 V                 ; 2.38 V             ; -0.00609 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-010 s                ; 5.69e-010 s                ; Yes                       ; Yes                       ;
+; dez_hora_bcd[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-006 V                  ; 2.38 V              ; -0.00293 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-010 s                 ; 4.44e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-006 V                 ; 2.38 V             ; -0.00293 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-010 s                ; 4.44e-010 s                ; Yes                       ; Yes                       ;
+; dez_hora_bcd[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_hora_bcd[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_hora_bcd[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
+; dez_hora_bcd[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-006 V                   ; 2.38 V              ; -0.0035 V           ; 0.163 V                              ; 0.052 V                              ; 4.72e-010 s                 ; 4.46e-010 s                 ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-006 V                  ; 2.38 V             ; -0.0035 V          ; 0.163 V                             ; 0.052 V                             ; 4.72e-010 s                ; 4.46e-010 s                ; Yes                       ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; change1         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; change2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; un_seg_bcd[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; un_seg_bcd[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; un_seg_bcd[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; un_seg_bcd[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; un_seg_bcd[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_seg_bcd[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; un_seg_bcd[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_seg_bcd[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_seg_bcd[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_seg_bcd[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; dez_seg_bcd[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; dez_seg_bcd[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; dez_seg_bcd[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; dez_seg_bcd[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_min_bcd[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; un_min_bcd[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_min_bcd[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; un_min_bcd[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_min_bcd[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; un_min_bcd[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_min_bcd[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; dez_min_bcd[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; dez_min_bcd[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; dez_min_bcd[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_min_bcd[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; dez_min_bcd[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; dez_min_bcd[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; dez_min_bcd[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_hora_bcd[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_hora_bcd[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; un_hora_bcd[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; un_hora_bcd[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_hora_bcd[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_hora_bcd[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; un_hora_bcd[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; dez_hora_bcd[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_hora_bcd[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-007 V                   ; 2.66 V              ; -0.0252 V           ; 0.259 V                              ; 0.202 V                              ; 3.9e-010 s                  ; 3.75e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-007 V                  ; 2.66 V             ; -0.0252 V          ; 0.259 V                             ; 0.202 V                             ; 3.9e-010 s                 ; 3.75e-010 s                ; No                        ; Yes                       ;
+; dez_hora_bcd[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-007 V                   ; 2.64 V              ; -0.0168 V           ; 0.147 V                              ; 0.259 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-007 V                  ; 2.64 V             ; -0.0168 V          ; 0.147 V                             ; 0.259 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; Yes                       ;
+; dez_hora_bcd[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_hora_bcd[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_hora_bcd[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
+; dez_hora_bcd[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-007 V                  ; 2.64 V              ; -0.0186 V           ; 0.148 V                              ; 0.266 V                              ; 3.49e-010 s                 ; 2.78e-010 s                 ; No                         ; No                         ; 2.62 V                      ; 5.38e-007 V                 ; 2.64 V             ; -0.0186 V          ; 0.148 V                             ; 0.266 V                             ; 3.49e-010 s                ; 2.78e-010 s                ; No                        ; No                        ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Transfers                                                                     ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; clk                ; clk                ; 0        ; 0        ; 0        ; 42       ;
+; clr                ; clr                ; 0        ; 0        ; 6        ; 54       ;
+; minutos:P2|change2 ; clr                ; 0        ; 0        ; 6        ; 48       ;
+; segundos:P1|change ; clr                ; 0        ; 0        ; 6        ; 39       ;
+; clr                ; minutos:P2|change2 ; 0        ; 0        ; 7        ; 61       ;
+; minutos:P2|change2 ; minutos:P2|change2 ; 0        ; 0        ; 14       ; 116      ;
+; clr                ; segundos:P1|change ; 0        ; 0        ; 9        ; 69       ;
+; segundos:P1|change ; segundos:P1|change ; 0        ; 0        ; 18       ; 111      ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------+
+; Hold Transfers                                                                      ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; clk                ; clk                ; 0        ; 0        ; 0        ; 42       ;
+; clr                ; clr                ; 0        ; 0        ; 6        ; 54       ;
+; minutos:P2|change2 ; clr                ; 0        ; 0        ; 6        ; 48       ;
+; segundos:P1|change ; clr                ; 0        ; 0        ; 6        ; 39       ;
+; clr                ; minutos:P2|change2 ; 0        ; 0        ; 7        ; 61       ;
+; minutos:P2|change2 ; minutos:P2|change2 ; 0        ; 0        ; 14       ; 116      ;
+; clr                ; segundos:P1|change ; 0        ; 0        ; 9        ; 69       ;
+; segundos:P1|change ; segundos:P1|change ; 0        ; 0        ; 18       ; 111      ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                  ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; clk                ; clk                ; 0        ; 0        ; 0        ; 49       ;
+; clr                ; clk                ; 0        ; 0        ; 7        ; 7        ;
+; clr                ; clr                ; 0        ; 0        ; 6        ; 42       ;
+; minutos:P2|change2 ; clr                ; 0        ; 0        ; 6        ; 42       ;
+; segundos:P1|change ; clr                ; 0        ; 0        ; 6        ; 33       ;
+; clr                ; minutos:P2|change2 ; 0        ; 0        ; 6        ; 42       ;
+; minutos:P2|change2 ; minutos:P2|change2 ; 0        ; 0        ; 12       ; 84       ;
+; clr                ; segundos:P1|change ; 0        ; 0        ; 6        ; 42       ;
+; segundos:P1|change ; segundos:P1|change ; 0        ; 0        ; 12       ; 66       ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------+
+; Removal Transfers                                                                   ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; clk                ; clk                ; 0        ; 0        ; 0        ; 49       ;
+; clr                ; clk                ; 0        ; 0        ; 7        ; 7        ;
+; clr                ; clr                ; 0        ; 0        ; 6        ; 42       ;
+; minutos:P2|change2 ; clr                ; 0        ; 0        ; 6        ; 42       ;
+; segundos:P1|change ; clr                ; 0        ; 0        ; 6        ; 33       ;
+; clr                ; minutos:P2|change2 ; 0        ; 0        ; 6        ; 42       ;
+; minutos:P2|change2 ; minutos:P2|change2 ; 0        ; 0        ; 12       ; 84       ;
+; clr                ; segundos:P1|change ; 0        ; 0        ; 6        ; 42       ;
+; segundos:P1|change ; segundos:P1|change ; 0        ; 0        ; 12       ; 66       ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 44    ; 44   ;
+; Unconstrained Output Port Paths ; 58    ; 58   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Jun 02 12:18:02 2013
+Info: Command: quartus_sta relogio -c relogio
+Info: qsta_default_script.tcl version: #1
+Info: Core supply voltage is 1.1V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "P1|change|combout" is a latch
+    Warning: Node "P2|change2|combout" is a latch
+    Warning: Node "P2|dez[1]|combout" is a latch
+    Warning: Node "P2|dez[3]|combout" is a latch
+    Warning: Node "P2|dez[2]|combout" is a latch
+    Warning: Node "P2|un[1]|combout" is a latch
+    Warning: Node "P2|un[3]|combout" is a latch
+    Warning: Node "P2|un[2]|combout" is a latch
+    Warning: Node "P4|display[0]|combout" is a latch
+    Warning: Node "P4|display[1]|combout" is a latch
+    Warning: Node "P4|display[2]|combout" is a latch
+    Warning: Node "P4|display[3]|combout" is a latch
+    Warning: Node "P4|display[4]|combout" is a latch
+    Warning: Node "P4|display[5]|combout" is a latch
+    Warning: Node "P4|display[6]|combout" is a latch
+    Warning: Node "P6|display[0]|combout" is a latch
+    Warning: Node "P6|display[1]|combout" is a latch
+    Warning: Node "P6|display[2]|combout" is a latch
+    Warning: Node "P6|display[3]|combout" is a latch
+    Warning: Node "P6|display[4]|combout" is a latch
+    Warning: Node "P6|display[5]|combout" is a latch
+    Warning: Node "P6|display[6]|combout" is a latch
+    Warning: Node "P7|display[0]|combout" is a latch
+    Warning: Node "P7|display[1]|combout" is a latch
+    Warning: Node "P7|display[2]|combout" is a latch
+    Warning: Node "P7|display[3]|combout" is a latch
+    Warning: Node "P7|display[4]|combout" is a latch
+    Warning: Node "P7|display[5]|combout" is a latch
+    Warning: Node "P7|display[6]|combout" is a latch
+    Warning: Node "P8|display[0]|combout" is a latch
+    Warning: Node "P3|un[3]|combout" is a latch
+    Warning: Node "P3|un[2]|combout" is a latch
+    Warning: Node "P3|un[1]|combout" is a latch
+    Warning: Node "P3|dez[3]|combout" is a latch
+    Warning: Node "P3|dez[2]|combout" is a latch
+    Warning: Node "P3|dez[1]|combout" is a latch
+    Warning: Node "P8|display[1]|combout" is a latch
+    Warning: Node "P8|display[2]|combout" is a latch
+    Warning: Node "P8|display[3]|combout" is a latch
+    Warning: Node "P8|display[4]|combout" is a latch
+    Warning: Node "P8|display[5]|combout" is a latch
+    Warning: Node "P8|display[6]|combout" is a latch
+    Warning: Node "P9|display[0]|combout" is a latch
+    Warning: Node "P9|display[1]|combout" is a latch
+    Warning: Node "P9|display[2]|combout" is a latch
+    Warning: Node "P9|display[3]|combout" is a latch
+    Warning: Node "P9|display[4]|combout" is a latch
+    Warning: Node "P9|display[5]|combout" is a latch
+    Warning: Node "P9|display[6]|combout" is a latch
+Critical Warning: Synopsys Design Constraints File file not found: 'relogio.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clk clk
+    Info: create_clock -period 1.000 -name clr clr
+    Info: create_clock -period 1.000 -name segundos:P1|change segundos:P1|change
+    Info: create_clock -period 1.000 -name minutos:P2|change2 minutos:P2|change2
+Warning: Found combinational loop of 16 nodes
+    Warning: Node "P3|un[0]~3|combout"
+    Warning: Node "P3|process_0~0|datab"
+    Warning: Node "P3|process_0~0|combout"
+    Warning: Node "P3|dez[3]~0|dataa"
+    Warning: Node "P3|dez[3]~0|combout"
+    Warning: Node "P3|dez[0]~1|dataa"
+    Warning: Node "P3|dez[0]~1|combout"
+    Warning: Node "P3|dez[0]~1|datac"
+    Warning: Node "P9|Equal9~0|datac"
+    Warning: Node "P9|Equal9~0|combout"
+    Warning: Node "P3|un[3]~1|dataa"
+    Warning: Node "P3|un[3]~1|combout"
+    Warning: Node "P3|dez[0]~1|dataf"
+    Warning: Node "P3|un[0]~3|datac"
+    Warning: Node "P3|un[3]~1|datad"
+    Warning: Node "P3|un[0]~3|datad"
+Warning: Found combinational loop of 17 nodes
+    Warning: Node "P2|dez[0]~1|combout"
+    Warning: Node "P2|process_0~1|dataa"
+    Warning: Node "P2|process_0~1|combout"
+    Warning: Node "P2|dez[3]~0|datad"
+    Warning: Node "P2|dez[3]~0|combout"
+    Warning: Node "P2|dez[0]~1|dataf"
+    Warning: Node "P2|change2~0|datad"
+    Warning: Node "P2|change2~0|combout"
+    Warning: Node "P2|un[0]~2|dataa"
+    Warning: Node "P2|un[0]~2|combout"
+    Warning: Node "P2|un[0]~2|datac"
+    Warning: Node "P6|Equal9~0|datab"
+    Warning: Node "P6|Equal9~0|combout"
+    Warning: Node "P2|dez[3]~0|datac"
+    Warning: Node "P2|change2~0|datab"
+    Warning: Node "P2|dez[0]~1|datab"
+    Warning: Node "P2|dez[0]~1|datad"
+Info: The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info: From: P2|change2~0|dataa  to: P2|dez[3]~0|combout
+    Info: From: P2|dez[3]~0|dataf  to: P6|Equal9~0|combout
+    Info: From: P2|un[0]~2|dataf  to: P6|Equal9~0|combout
+    Info: From: P3|dez[3]~0|datad  to: P3|un[3]~1|combout
+    Info: From: P3|un[0]~3|dataf  to: P3|un[3]~1|combout
+    Info: From: P3|un[3]~1|datab  to: P9|Equal9~0|combout
+Info: No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Info: write_sdc -pt
+Info: Analyzing Slow 1100mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -14.437
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:   -14.437       -77.793 segundos:P1|change 
+    Info:    -8.627       -49.140 minutos:P2|change2 
+    Info:    -7.436       -36.830 clr 
+    Info:    -0.194        -0.449 clk 
+Info: Worst-case hold slack is -3.281
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.281       -17.514 clr 
+    Info:    -2.231        -6.399 segundos:P1|change 
+    Info:    -0.292        -0.756 minutos:P2|change2 
+    Info:     0.320         0.000 clk 
+Info: Worst-case recovery slack is -12.157
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:   -12.157       -72.190 segundos:P1|change 
+    Info:    -7.287       -42.942 minutos:P2|change2 
+    Info:    -7.202       -32.203 clr 
+    Info:    -0.658        -4.606 clk 
+Info: Worst-case removal slack is -3.761
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.761       -20.156 clr 
+    Info:    -2.711        -7.979 segundos:P1|change 
+    Info:    -0.628        -1.818 minutos:P2|change2 
+    Info:     0.378         0.000 clk 
+Info: Worst-case minimum pulse width slack is -3.363
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.363       -57.579 segundos:P1|change 
+    Info:    -0.765       -10.751 minutos:P2|change2 
+    Info:    -0.369        -6.804 clk 
+    Info:     0.294         0.000 clr 
+Info: Analyzing Slow 1100mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info: From: P2|change2~0|dataa  to: P2|dez[3]~0|combout
+    Info: From: P2|dez[3]~0|dataf  to: P6|Equal9~0|combout
+    Info: From: P2|un[0]~2|dataf  to: P6|Equal9~0|combout
+    Info: From: P3|dez[3]~0|datad  to: P3|un[3]~1|combout
+    Info: From: P3|un[0]~3|dataf  to: P3|un[3]~1|combout
+    Info: From: P3|un[3]~1|datab  to: P9|Equal9~0|combout
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -13.411
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:   -13.411       -72.368 segundos:P1|change 
+    Info:    -7.945       -45.020 minutos:P2|change2 
+    Info:    -6.941       -33.988 clr 
+    Info:    -0.092        -0.177 clk 
+Info: Worst-case hold slack is -2.985
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.985       -15.987 clr 
+    Info:    -1.927        -5.538 segundos:P1|change 
+    Info:    -0.198        -0.471 minutos:P2|change2 
+    Info:     0.297         0.000 clk 
+Info: Worst-case recovery slack is -11.369
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:   -11.369       -67.238 segundos:P1|change 
+    Info:    -6.734       -29.871 clr 
+    Info:    -6.716       -39.401 minutos:P2|change2 
+    Info:    -0.534        -3.738 clk 
+Info: Worst-case removal slack is -3.454
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.454       -18.480 clr 
+    Info:    -2.396        -7.054 segundos:P1|change 
+    Info:    -0.504        -1.448 minutos:P2|change2 
+    Info:     0.424         0.000 clk 
+Info: Worst-case minimum pulse width slack is -3.074
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.074       -52.325 segundos:P1|change 
+    Info:    -0.685        -9.186 minutos:P2|change2 
+    Info:    -0.369        -6.790 clk 
+    Info:     0.311         0.000 clr 
+Info: Analyzing Fast 1100mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info: From: P2|change2~0|dataa  to: P2|dez[3]~0|combout
+    Info: From: P2|dez[3]~0|dataf  to: P6|Equal9~0|combout
+    Info: From: P2|un[0]~2|dataf  to: P6|Equal9~0|combout
+    Info: From: P3|dez[3]~0|datad  to: P3|un[3]~1|combout
+    Info: From: P3|un[0]~3|dataf  to: P3|un[3]~1|combout
+    Info: From: P3|un[3]~1|datab  to: P9|Equal9~0|combout
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {segundos:P1|change}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -rise_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {minutos:P2|change2}] -fall_to [get_clocks {clr}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {minutos:P2|change2}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clr}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -setup 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -rise_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -fall_from [get_clocks {clr}] -fall_to [get_clocks {clk}] -hold 0.040
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {segundos:P1|change}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -10.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:   -10.000       -54.113 segundos:P1|change 
+    Info:    -5.565       -31.222 minutos:P2|change2 
+    Info:    -5.219       -24.410 clr 
+    Info:     0.258         0.000 clk 
+Info: Worst-case hold slack is -2.079
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.079       -11.247 clr 
+    Info:    -1.240        -3.583 segundos:P1|change 
+    Info:    -0.004        -0.004 minutos:P2|change2 
+    Info:     0.196         0.000 clk 
+Info: Worst-case recovery slack is -8.663
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -8.663       -50.707 segundos:P1|change 
+    Info:    -5.148       -21.828 clr 
+    Info:    -4.739       -27.396 minutos:P2|change2 
+    Info:    -0.114        -0.798 clk 
+Info: Worst-case removal slack is -2.484
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.484       -13.223 clr 
+    Info:    -1.645        -4.871 segundos:P1|change 
+    Info:    -0.224        -0.639 minutos:P2|change2 
+    Info:     0.219         0.000 clk 
+Info: Worst-case minimum pulse width slack is -2.100
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.100       -36.266 segundos:P1|change 
+    Info:    -0.343        -4.207 clk 
+    Info:    -0.280        -3.376 minutos:P2|change2 
+    Info:     0.442         0.000 clr 
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 89 warnings
+    Info: Peak virtual memory: 243 megabytes
+    Info: Processing ended: Sun Jun 02 12:18:08 2013
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+

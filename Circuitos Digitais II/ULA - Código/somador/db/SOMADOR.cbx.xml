@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SOMADOR">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SOMADOR|lpm_mux:Mux0" CBX_FILE_NAME="mux_4cc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SOMADOR|lpm_mux:Mux1" CBX_FILE_NAME="mux_4cc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
