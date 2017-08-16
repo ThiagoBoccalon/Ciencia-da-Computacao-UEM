@@ -1,0 +1,106 @@
+﻿<Page
+    x:Class="RiskCreditUniversal.Page01"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RiskCreditUniversal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF431693" Opacity="0.5" >
+
+
+        <StackPanel HorizontalAlignment="Left" 
+                    Margin="0,0,0,0" 
+                    Background="#FF493B3B"
+                    Width="850">
+
+            <TextBox  FontSize="35"  
+                      Text="Qual o Valor de € que o Sr. possui no banco?" 
+                      FontWeight="Bold" 
+                      Margin="0,0,0,0"
+                      Foreground="#FFF1F0F0" BorderBrush="#FF741616" Background="#FF114BE4"/>
+
+            <RadioButton x:Name="buttonStatusConta1" 
+        		HorizontalAlignment="Left"
+        		Content="Possui €0,00." 
+        		VerticalAlignment="Top"
+                FontSize="50"
+                Foreground="#FFF5E7E7"                
+                FontFamily="Times New Roman"
+        		Margin="20,30,0,0" 
+                />
+
+            <RadioButton x:Name="buttonStatusConta2"
+        		    Content="Possui um valor entre €0,01 e €200,00."
+        		    HorizontalAlignment="Left"
+        		    VerticalAlignment="Top"
+                    FontSize="50"        		
+                    Foreground="#FFF5E7E7"                   
+                    FontFamily="Times New Roman"
+                    Margin="20,30,0,0"
+            />
+
+            <RadioButton x:Name="buttonStatusConta3"
+        		    Content="Têm um valor maior que €200,00."
+        		    HorizontalAlignment="Left"
+        		    VerticalAlignment="Top"
+        		    FontSize="50"
+                    Foreground="#FFF5E7E7"                    
+                    FontFamily="Times New Roman"
+                    Margin="20,30,0,0"
+            />
+
+            <RadioButton x:Name="buttonStatusConta4"
+        		    Content="Não têm conta."
+        		    HorizontalAlignment="Left"
+        		    VerticalAlignment="Top"
+        		    FontSize="50"
+                    Foreground="#FFF5E7E7"                    
+                    FontFamily="Times New Roman"
+                    Margin="20,30,0,0"
+            />
+           
+            <Ellipse
+                Width="200"
+                Height="200"
+                HorizontalAlignment="Center"
+                Margin="0,50,90,0" 
+                Fill="#FF1DE426"                
+                />
+
+            <Button x:Name="buttonStatusContaProxima" 
+        		Content="Próxima" 
+        		Margin="0,-190,100,0"         		
+        		Height="50"               
+        		Click="buttonStatusContaConfirma_Click" 
+        		HorizontalAlignment="Center" 
+        		Width="170" 
+                Foreground="#FFF3F3F3" 
+                FontSize="25" 
+                FontFamily="Ravie" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                />
+
+
+            
+            
+           
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Width="430">
+            <Image Source="Assets/Imagens/Bank.jpg" 
+                   Stretch="Fill" 
+                   Height="670"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width="380"
+                   Margin="0,0,0,0"/>
+        </StackPanel>
+
+
+
+
+    </Grid>
+</Page>

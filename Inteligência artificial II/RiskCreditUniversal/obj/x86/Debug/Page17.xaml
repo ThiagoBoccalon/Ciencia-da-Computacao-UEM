@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="RiskCreditUniversal.Page17"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RiskCreditUniversal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="#FF431693" Opacity="0.5" >
+        <StackPanel HorizontalAlignment="Left" 
+                    Margin="0,0,0,0" 
+                    Background="#FF493B3B"
+                    Width="850">
+
+            <TextBox  FontSize="40"  
+                      Text="Com relação a sua vida Profissional." 
+                      FontWeight="Bold" 
+                      Margin="0,0,0,0"
+                      Foreground="#FFF1F0F0" BorderBrush="#FF741616" Background="#FF114BE4"/>
+
+            <RadioButton x:ConnectionId='1' x:Name="buttonVidaProfissional1" 
+        		HorizontalAlignment="Left"
+        		Content="Está desempregado ou não pussui uma profissão." 
+        		VerticalAlignment="Top"
+                FontSize="40"
+                Foreground="#FFF5E7E7"
+                
+                FontFamily="Times New Roman"
+        		Margin="20,15,0,0" 
+                />
+
+            <RadioButton x:ConnectionId='2' x:Name="buttonVidaProfissional2"
+        		    Content="Trabalha autonomo mas sem qualificação (profissão)."
+        		    HorizontalAlignment="Left"
+        		    VerticalAlignment="Top"
+                    FontSize="40"        		
+                    Foreground="#FFF5E7E7"                   
+                    FontFamily="Times New Roman"
+                    Margin="20,15,0,0"
+            />
+
+            <RadioButton x:ConnectionId='3' x:Name="buttonVidaProfissional3"
+        		    Content="Possui uma profissão e trabalha com Carteira Registrada."
+        		    HorizontalAlignment="Left"
+        		    VerticalAlignment="Top"
+        		    FontSize="40"
+                    Foreground="#FFF5E7E7"                    
+                    FontFamily="Times New Roman"
+                    Margin="20,15,0,0"
+            />
+
+            <RadioButton x:ConnectionId='4' x:Name="buttonVidaProfissional4"
+        		    Content="Trabalha como Gerente com carteira registrada e possui uma alta qualificação."
+        		    HorizontalAlignment="Left"
+        		    VerticalAlignment="Top"
+        		    FontSize="40"
+                    Foreground="#FFF5E7E7"                    
+                    FontFamily="Times New Roman"
+                    Margin="20,15,0,0"
+            />
+            
+            <Ellipse
+                Width="200"
+                Height="200"
+                HorizontalAlignment="Center"
+                Margin="0,25,90,0" 
+                Fill="#FF1DE426"                
+            />
+
+            <Button x:ConnectionId='5' x:Name="buttonStatusContaProxima" 
+        		Content="Próxima" 
+        		Margin="285,-190,380,0"         		
+        		Height="50"               
+        		                                        
+        		HorizontalAlignment="Center" 
+        		Width="150" 
+                Foreground="#FFF3F3F3" 
+                FontSize="20" 
+                FontFamily="Ravie" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                />
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Width="430">
+            <Image Source="Assets/Imagens/Bank.jpg" 
+                   Stretch="Fill" 
+                   Height="670"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width="380"
+                   Margin="0,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

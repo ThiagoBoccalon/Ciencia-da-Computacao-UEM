@@ -1,0 +1,21 @@
+Dados de Teste:
+
+Idade: 90
+Velocidade: 110
+Acidentes: 0
+Experiência: 20
+
+Idade: 28
+Velocidade: 110
+Acidentes: 0
+Experiência: 8
+
+Idade: 18
+Velocidade: 90
+Acidentes: 5
+Experiência: 0
+
+Idade: 56
+Velocidade: 90
+Acidentes: 5
+Experiência: 1
