@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1401886318 source:c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho2_final\arvoreb_trabalho2\btio.c
+	<fcntl.h>
+	"stdio.h"
+	"bt.h"
+	"fileio.h"
+
+1401831095 c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho2_final\arvoreb_trabalho2\bt.h
+
+1401818956 c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho2_final\arvoreb_trabalho2\fileio.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1401886934 source:c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho2_final\arvoreb_trabalho2\btutil.c
+	"bt.h"
+	"fileio.h"
+
+1401886318 source:c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho2_final\arvoreb_trabalho2\driver.c
+	<stdio.h>
+	"bt.h"
+	"Menu.h"
+
+1401839822 source:c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho2_final\arvoreb_trabalho2\insert.c
+	"bt.h"
+
+1401885147 c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho2_final\arvoreb_trabalho2\menu.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fcntl.h>
+
