@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1400811645 source:c:\users\thiago\skydrive\uem\organização e recuperação de dados\trabalho 2\trabalho_ord\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fcntl.h>
+
