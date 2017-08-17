@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1409062072 source:c:\users\thiago\skydrive\uem\matematica computacional\trabalho 2\airtonmultiplicacao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
