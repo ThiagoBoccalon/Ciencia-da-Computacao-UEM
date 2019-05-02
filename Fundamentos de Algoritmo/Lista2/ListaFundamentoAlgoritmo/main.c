@@ -25,6 +25,7 @@ void exercicio_09(){
 
 
 void exercicio_10(){
+
     double VALOR_MACAS_ATE_UMA_DUZIA = 1.3;
     double VALOR_MACAS_ACIMA_DE_UMA_DUZIA  = 1;
 
@@ -35,7 +36,7 @@ void exercicio_10(){
     printf("Informe a quantidade de macas compradas: ");
     scanf("%d", &quantidade_macas_compradas);
 
-    printf(quantidade_macas_compradas);
+
 
     if(quantidade_macas_compradas > 0){
         if(quantidade_macas_compradas < 12){
@@ -45,7 +46,7 @@ void exercicio_10(){
             valor_total_das_macas = quantidade_macas_compradas * VALOR_MACAS_ACIMA_DE_UMA_DUZIA;
         }
 
-        printf("Valor total: %d", valor_total_das_macas);
+        printf("Valor total: %.2f", valor_total_das_macas);
     }
     else
     {
