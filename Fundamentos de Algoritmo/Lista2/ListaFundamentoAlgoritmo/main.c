@@ -4,7 +4,8 @@
 int main()
 {
     //exercicio_09();
-    exercicio_10();
+    //exercicio_10();
+    //exercicio_074();
     return 0;
 }
 
