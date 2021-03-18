@@ -1,0 +1,6 @@
+ERROR: value too long for type character varying(10)
+***************Error*****************
+
+ERROR: value too long for type character varying(10)
+SQL state: 22001
+

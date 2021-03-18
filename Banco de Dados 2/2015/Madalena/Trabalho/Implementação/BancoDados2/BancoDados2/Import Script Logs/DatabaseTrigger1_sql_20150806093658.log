@@ -1,0 +1,17 @@
+06/08/2015 18:36:58	This log contains information about the import operation of the script 'DatabaseTrigger1.sql' into project 'BancoDados2' on computer 'THIAGOBUCALON' by user'Thiago.
+06/08/2015 18:36:58	Started importing file: C:\Users\Thiago\AppData\Local\Temp\tmp149D.tmp 
+06/08/2015 18:36:58	File name C:\Users\Thiago\AppData\Local\Temp\tmp149D.tmp (size: 6549442)
+06/08/2015 18:36:58	Parsing import script
+06/08/2015 18:37:47	Total number of batches in script: 18
+06/08/2015 18:37:47	Total number of statements in script: 4
+06/08/2015 18:37:47	The script was successfully imported into the project.
+06/08/2015 18:37:47	Analyzing schema objects...
+06/08/2015 18:37:47	Scanning project for duplicate elements
+06/08/2015 18:37:47	Element 'FileTable1' was merged into the existing script: 'C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\FileTable1.sql'.
+06/08/2015 18:37:47	Element 'FileTable1' was merged into the existing script: 'C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\FileTable1.sql'.
+06/08/2015 18:37:47	Element 'DatabaseTrigger1' was merged into the existing script: 'C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\DatabaseTrigger1.sql'.
+06/08/2015 18:37:47	Element 'DatabaseTrigger1' was merged into the existing script: 'C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\DatabaseTrigger1.sql'.
+06/08/2015 18:37:48	Finished duplicate element processing
+06/08/2015 18:37:51	In the script that you provided to the import operation, one or more statements were not fully understood. These statements were moved to the ScriptsIgnoredOnImport.sql file. Review the file contents for additional information.
+06/08/2015 18:37:51	A summary of the import was saved to the following location: C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\Import Script Logs\DatabaseTrigger1_sql_20150806093658.log
+06/08/2015 18:37:51	Click Finish to continue...

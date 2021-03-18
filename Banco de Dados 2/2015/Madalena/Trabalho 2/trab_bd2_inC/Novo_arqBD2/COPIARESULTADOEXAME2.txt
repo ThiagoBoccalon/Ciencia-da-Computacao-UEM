@@ -1,0 +1,2 @@
+"NumProtocolo";"CodExame";"NumItem";"NumAtributo";"NomeAtributo";"Tipo";"Visivel";"Informado";"Calculado";"Fórmula";"TextoValorNormal";"ResultadoPadrao";"Unidade";"Normalidade";"Resultado";"NumExame";"Impresso"
+24

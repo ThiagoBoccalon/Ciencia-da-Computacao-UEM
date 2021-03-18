@@ -1,0 +1,56 @@
+http://www.pinceladasdaweb.com.br/blog/2010/02/22/instalar-apache-php-mysql-no-windows-7-vista-xp/#install-php
+====
+
+Configurações extras para o Apache
+
+Após a instalação do Apache, vamos efetuar algumas configurações adicionais simples, para isso, vamos alterar o arquivo httpd.conf que está localizado dentro da pasta conf no diretório de instalação do Apache. Cuidado ao editar esse arquivo, pois qualquer erro e seu servidor pode parar de funcionar. Para habilitar o uso de URL’s amigáveis no servidor, você deve habilitar o módulo de mod_rewrite, bastando localizar a linha:
+
+view sourceprint?
+1. #LoadModule rewrite_module modules/mod_rewrite.so
+E substituir a mesma por:
+
+view sourceprint?
+1. DirectoryIndex index.html
+E substituir a mesma por:
+
+
+#BEGIN PHP INSTALLER EDITS - REMOVE ONLY ON UNINSTALL
+PHPIniDir "C:\Webserver\PHP5\"
+LoadModule php5_module "C:\Webserver\PHP5\php5apache2_2.dll"
+#END PHP INSTALLER EDITS - REMOVE ONLY ON UNINSTALL
+
+===
+
+Configuração do PHP
+
+A configuração do PHP envolve a edição do arquivo php.ini, na pasta onde o PHP for instalado, portanto, mãos a obra. Uma configuração útil é a ativar o uso de delimitadores < ? ... ?>, muito usados por serem mais simples. No arquivo php.ini, localize a linha que começa com short_open_tag e troque seu valor Off para On (Fique atento as letras maiúsculas e minúsculas). Ela deve ficar dessa forma:
+
+view sourceprint?
+1. short_open_tag = On
+Caso você deixe Off, scripts PHP que iniciem com <? não serão identificados, somente os scripts que inciem com <?php funcionarão.
+
+Permitir estilo ASP
+view sourceprint?
+1. asp_tags = On
+Ative este item apenas se você gostar de usar as tags no estilo ASP, como em <% … %>, caso contrário, pode deixar desativado.
+
+Habilitar a exibição de erros
+view sourceprint?
+1. display_errors = On
+Por questões de segurança esse item vem com valor Off. Sua função é a de imprimir erros de sintaxe ou funcionamento do PHP na página. Por questões de segurança, é bom deixá-lo em Off, pois entre as mensagens de erros muitas vezes vêm nomes de arquivos, caminhos locais, e até a senha do banco de dados, se tiver algum erro de sintaxe justamente na declaração da mesma. Mas em contrapartida, para aprender PHP, é recomedável deixá-lo em On.
+
+===
+
+Instalação do PhpMyAdmin
+
+Após efetuar o download do PhpMyAdmin, descompacte o mesmo e renomeie a pasta para phpmyadmin. Após, coloque a pasta dentro do diretório htdocs da pasta de instalação do Apache. Para acessar agora o PhpMyAdmin basta você digitar o seguinte: http://localhost/phpmyadmin/, entre com o usuário root e senha que você configurou para o mesmo na instalação do MySQL e pronto, você já tem acesso ao PhpMyAdmin.
+
+Se você quiser pular esse passo de toda vez ao acessar o PhpMyAdmin ter de se logar, basta fazer o seguinte. Na pasta do mesmo abra o arquivo config.sample.inc.php e o renomeie para config.inc.php. Agora basta substituir a linha $cfg['Servers'][$i]['auth_type'] = ‘cookie’; por:
+
+view sourceprint?
+
+$cfg['Servers'][$i]['user']          = 'root';
+$cfg['Servers'][$i]['password']      = ' '; // Digite aqui a senha de root
+$cfg['Servers'][$i]['auth_type']     = 'config';
+
+Pronto, agora toda vez ao acessar o PhpMyAdmin ele irá pular a tela de autenticação pois o usuário e senha já estão cadastrados no arquivo de configuração.

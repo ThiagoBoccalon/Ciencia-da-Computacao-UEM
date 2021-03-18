@@ -1,0 +1,10 @@
+06/08/2015 20:05:40	This log contains information about the import operation of the script 'PACIENTE.sql' into project 'BancoDados2' on computer 'THIAGOBUCALON' by user'Thiago.
+06/08/2015 20:05:40	Started importing file: C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\PACIENTE.sql 
+06/08/2015 20:05:40	File name C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\PACIENTE.sql (size: 3242928)
+06/08/2015 20:05:40	Parsing import script
+06/08/2015 20:06:13	Total number of batches in script: 1
+06/08/2015 20:06:13	Total number of statements in script: 0
+06/08/2015 20:06:13	The script was successfully imported into the project.
+06/08/2015 20:06:16	In the script that you provided to the import operation, one or more statements were not fully understood. These statements were moved to the ScriptsIgnoredOnImport.sql file. Review the file contents for additional information.
+06/08/2015 20:06:16	A summary of the import was saved to the following location: C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\Import Script Logs\PACIENTE_sql_20150806110540.log
+06/08/2015 20:06:16	Click Finish to continue...

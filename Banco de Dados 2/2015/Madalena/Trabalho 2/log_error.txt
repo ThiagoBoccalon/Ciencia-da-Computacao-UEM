@@ -1,0 +1,13 @@
+	AND (SUBSTR(A.datarequisicao,4,2) = '01'))
+2015-08-28 14:20:11  GMT ERROR: value too long for type character varying(10)
+2015-08-28 14:20:11  GMT STATEMENT: BEGIN;
+
+	UPDATE requisicao
+	SET idposto ='12300'
+	WHERE NumProtocolo = '1032579'
+
+	UPDATE requisicao
+	SET idposto ='12345678900123456789'
+	WHERE	 NumProtocolo = '11011065';
+	
+	COMMIT;

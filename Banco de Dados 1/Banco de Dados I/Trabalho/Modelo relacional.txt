@@ -1,0 +1,25 @@
+Nome da tabela pessoa é chave primária simples que serve como chave estrangeira para as tabelas transporte, equipamento de pesca e pesquisa.
+Código da tabela tipo_vara é chave primária simples que serve como chave estrangeira para a tabela equipamento de pesca e pesquisa.
+Código da tabela tipo_isca é chave primária  simples que serve como chave estrangeira para a tabela equipamento de pesca e pesquisa.
+Código da tabela tipo_passaguá é chave primária simples que serve como chave estrangeira para a tabela equipamento de pesca e pesquisa.
+Código da tabela tipo_alicatemanuseio é chave primária simples que serve como chave estrangeira para a tabela equipamento de pesca e pesquisa.
+Código da tabela tipo_combustível é chave primária simples que serve como chave estrangeira para a tabela transporte.
+Código da tabela espécie_peixe é chave primária simples que serve como chave estrangeira para a tabela pesquisa.
+Código da tabela porto é chave primária simples que serve como chave estrangeira da tabela condição_ambiental e pesquisa.
+Data da tabela condição_ambiental é chave primária simples.
+O relacionamento pesquisa foi transformado em tabela usando adição de coluna dos atributos chave das tabelas porto, espécie_peixe e equipamento de pesca.
+A tabela transporte foi feita usando adição de coluna dos atributos chave das tabelas tipo_combustível e pessoa, esses atributos compõem a chave primária composta com os atributos pessoa e combustível.
+A tabela equipamento de pesca foi feita usando adição de coluna dos atributos chave das tabelas pessoa, tipo_vara, tipo_isca, tipo_passaguá e tipo_alicatemanuseio, esses atributos compõem a chave primária composta da tabela equipamento de pesca. 
+
+Pessoa(_Nome_, Telefone, Email, Endereço)
+Porto(_Código_, Nome, Endereço)
+Equipamento de pesca(_Pessoa_, _Vara_, _Isca_, _Passaguá_, _AlicateManuseio_)
+Espécie_peixe(_Código_, NomeCientífico, NomeUsual)
+Transporte(_Pessoa_, _Combustível_)
+Condição_ambiental(_Data_, Lua, Vento, Sol/Chuva/Nublado)
+Tipo_combustível(_Código_, Nome, Preço)
+Tipo_vara(_Código_, Nome, Preço)
+Tipo_isca(_Código_, Nome, Preço)
+Tipo_passaguá(_Código_, Nome, Preço)
+Tipo_alicatemanuseio(_Código_, Nome, Preço)
+Pesquisa(_peixe_, _porto_, _vara_, _isca_, _passaguá_, _alicatemanuseio_)

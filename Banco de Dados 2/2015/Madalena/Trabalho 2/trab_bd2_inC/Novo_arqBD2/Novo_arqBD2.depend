@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1439410174 source:c:\users\thiago\desktop\trab_bd2_inc\novo_arqbd2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

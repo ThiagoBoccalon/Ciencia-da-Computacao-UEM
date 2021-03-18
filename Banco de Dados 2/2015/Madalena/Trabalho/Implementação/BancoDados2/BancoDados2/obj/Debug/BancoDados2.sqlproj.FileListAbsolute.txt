@@ -1,0 +1,5 @@
+C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\bin\Debug\BancoDados2.dacpac
+C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\bin\Debug\BancoDados2.dll
+C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\bin\Debug\BancoDados2.pdb
+C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\obj\Debug\BancoDados2.dll
+C:\Users\Thiago\OneDrive\UEM\Banco de Dados 2\Madalena\Trabalho\Implementação\BancoDados2\BancoDados2\obj\Debug\BancoDados2.pdb
