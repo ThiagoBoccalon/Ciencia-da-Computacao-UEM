@@ -1,0 +1,29 @@
+ld R0, (101) # A vetor posi i
+ld R1, (102)
+ld R2, (102) #valor de N
+ld R3, (103) #inicializou j = 1
+ld R4, (104) #inicializaou i = 1
+ld R5, (105) # 1
+
+
+
+sub R2, R5, R2 		# N-1
+F0: bl  R3, R2, F1 		# para j= 1 até N-1 faça
+jump F5
+
+F1: bl R4, R2, F3 	# para i=1 até N-1 faça
+add  R3, R5, R3         #j++
+jump F0
+
+F3: bg R0, R1, F4	#se A[i] > A[i+1] entao
+jump F1
+F4: add R6, R0, R7 		#aux = A[i]
+    ld  R0, (107) 		# zerei R5 A[i]
+    add R0, R1, R0       	#A[i] = A[i+1]
+    ld  R7, (107)		#zerei A[i+1]
+    add R1, R6, R1    A[i+1] = aux
+    add R4, R5, R4  	    # i++
+	
+    jump F3
+
+F5: exit

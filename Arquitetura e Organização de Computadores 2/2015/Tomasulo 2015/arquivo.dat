@@ -1,0 +1,49 @@
+ARQUITETURA:
+
+Somador 5
+Multiplicador 3
+Busca 5
+Janela 4
+Porta banco de registradores 29
+Buffer load 5
+Imemora  40,50
+Buffer store  5
+Memoria  18
+Emissão  5
+Cálculo de endereço  1
+
+CICLOS:
+
+ld 4
+sd 4
+add 7
+add.i 1
+sub 10
+sub.i 18
+div 4
+div.i 2
+mult 4
+mult.i 2
+beq 1
+bne 2
+bge 3
+bg 4
+ble 5
+bl 6
+li 4
+jump 0
+exit 0
+nop 0
+
+TEXTO:
+li R10, 10
+addi R20, R10, 20
+subi R15, R20, 10
+addi R20, R10, 5
+
+
+
+
+
+
+

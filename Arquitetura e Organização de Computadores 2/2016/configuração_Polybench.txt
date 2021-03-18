@@ -1,0 +1,17 @@
+(PolyBench)
+
+~/SimpleScalar/polybeanch-c-4.2/nome_programa/src
+
+$~/SimpleScalar/bin/sslittle-na-sstrix-gcc -x c++ -I /usr/include ~/simpleScalar/polybench-c-4.2/utilities -DSMALL_DATASET ~/simplescalar/polybench-c-4.2/utilities/polybench.c
+
+
+execução e gera arquivo saída de dados:
+
+~/Simplescalar/simplesim-3.0/sim-bpred -bpred taken -redir:sim ./durbin_taken ./a.out
+
+
+(cBench)
+
+~/SimpleScalar/polybeanch-c-4.2/nome_programa/src
+
+$~/simpleScalar/bin/sslittle-na-sstrix-gcc -x c++ -I ./ *.c
