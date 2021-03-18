@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 5/Exercicio_2_Comportamental/Exercicio_2_Comportamental.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 5/Exercicio_2_Comportamental/db/Exercicio_2_Comportamental.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = Exercicio_2_Comportamental
+instance = comp, \ch[0]~I\, ch[0], Exercicio_2_Comportamental, 1
+instance = comp, \ch[1]~I\, ch[1], Exercicio_2_Comportamental, 1
+instance = comp, \Equal0~2\, Equal0~2, Exercicio_2_Comportamental, 1
+instance = comp, \ch[2]~I\, ch[2], Exercicio_2_Comportamental, 1
+instance = comp, \ch[3]~I\, ch[3], Exercicio_2_Comportamental, 1
+instance = comp, \Alarme~I\, Alarme, Exercicio_2_Comportamental, 1

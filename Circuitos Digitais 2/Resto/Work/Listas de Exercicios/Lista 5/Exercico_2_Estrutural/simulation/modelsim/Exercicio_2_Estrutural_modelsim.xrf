@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 5/Exercico_2_Estrutural/not_1.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 5/Exercico_2_Estrutural/And_4.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 5/Exercico_2_Estrutural/Or_2.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 5/Exercico_2_Estrutural/db/Exercicio_2_Estrutural.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 5/Exercico_2_Estrutural/exercicio_2_estrutural.vhd
+design_name = Exercicio_2_Estrutural
+instance = comp, \Ing~I\, Ing, Exercicio_2_Estrutural, 1
+instance = comp, \Beltd~I\, Beltd, Exercicio_2_Estrutural, 1
+instance = comp, \P4|S1~1\, P4|S1~1, Exercicio_2_Estrutural, 1
+instance = comp, \Driv~I\, Driv, Exercicio_2_Estrutural, 1
+instance = comp, \Pass~I\, Pass, Exercicio_2_Estrutural, 1
+instance = comp, \Alarme~I\, Alarme, Exercicio_2_Estrutural, 1

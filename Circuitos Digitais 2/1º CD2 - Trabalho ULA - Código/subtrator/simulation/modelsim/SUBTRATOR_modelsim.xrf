@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/TRABALHO_CD2/SUBTRATOR/SUBTRATOR.vhd
+source_file = 1, C:/Users/Thiago/Desktop/TRABALHO_CD2/SUBTRATOR/SUBTRATOR.vwf
+source_file = 1, C:/Users/Thiago/Desktop/TRABALHO_CD2/SUBTRATOR/db/SUBTRATOR.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = SUBTRATOR
+instance = comp, \EN_SUB[1]~I\, EN_SUB[1], SUBTRATOR, 1
+instance = comp, \EN_SUB[2]~I\, EN_SUB[2], SUBTRATOR, 1
+instance = comp, \EN_SUB[0]~I\, EN_SUB[0], SUBTRATOR, 1
+instance = comp, \S_Cout[1]~5\, S_Cout[1]~5, SUBTRATOR, 1
+instance = comp, \S_Cout[0]~13\, S_Cout[0]~13, SUBTRATOR, 1
+instance = comp, \S_Cout[1]~I\, S_Cout[1], SUBTRATOR, 1
+instance = comp, \S_Cout[0]~I\, S_Cout[0], SUBTRATOR, 1

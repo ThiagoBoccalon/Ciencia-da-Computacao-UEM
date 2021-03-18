@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/Work/latch_d/latch_d.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/latch_d/db/latch_d.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = LATCH_D
+instance = comp, \D~I\, D, LATCH_D, 1
+instance = comp, \D~4\, D~4, LATCH_D, 1
+instance = comp, \D~2\, D~2, LATCH_D, 1
+instance = comp, \Q~I\, Q, LATCH_D, 1
+instance = comp, \QBAR~I\, QBAR, LATCH_D, 1

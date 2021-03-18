@@ -1,0 +1,4 @@
+set tool_name "ModelSim (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {EXERCICIO_9_SELECT_WHEN.vho EXERCICIO_9_SELECT_WHEN_vhd.sdo}}
+}

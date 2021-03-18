@@ -1,0 +1,20 @@
+|minutos
+clr => process_0~0.IN0
+un[0] << un[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+un[1] << un[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+un[2] << un[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+un[3] << un[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez[0] << dez[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez[1] << dez[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez[2] << dez[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez[3] << dez[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+un_seg[0] << un_seg[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+un_seg[1] << un_seg[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+un_seg[2] << un_seg[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+un_seg[3] << un_seg[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez_seg[0] << dez_seg[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez_seg[1] << dez_seg[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez_seg[2] << dez_seg[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dez_seg[3] << dez_seg[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

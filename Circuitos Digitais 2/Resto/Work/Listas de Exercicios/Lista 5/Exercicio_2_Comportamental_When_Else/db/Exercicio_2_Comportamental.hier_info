@@ -1,0 +1,20 @@
+|Exercicio_2_Comportamental
+ch[0] => Equal0.IN7
+ch[0] => Equal1.IN7
+ch[0] => Equal2.IN7
+ch[0] => Equal3.IN7
+ch[1] => Equal0.IN6
+ch[1] => Equal1.IN6
+ch[1] => Equal2.IN6
+ch[1] => Equal3.IN6
+ch[2] => Equal0.IN5
+ch[2] => Equal1.IN5
+ch[2] => Equal2.IN5
+ch[2] => Equal3.IN5
+ch[3] => Equal0.IN4
+ch[3] => Equal1.IN4
+ch[3] => Equal2.IN4
+ch[3] => Equal3.IN4
+Alarme <= Alarme.DB_MAX_OUTPUT_PORT_TYPE
+
+

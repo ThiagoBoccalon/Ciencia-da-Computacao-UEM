@@ -1,0 +1,14 @@
+|Exercicio_1
+E0 => process_0~0.IN0
+E0 => S_Reitor$latch.PRESET
+E1 => process_0~1.IN1
+E1 => process_0~2.IN0
+E2 => process_0~3.IN1
+E2 => process_0~5.IN0
+E3 => process_0~6.IN1
+S_Reitor <= S_Reitor$latch.DB_MAX_OUTPUT_PORT_TYPE
+S_VReitor <= S_VReitor$latch.DB_MAX_OUTPUT_PORT_TYPE
+S_Assessor <= S_Assessor$latch.DB_MAX_OUTPUT_PORT_TYPE
+S_Secretaria <= S_Secretaria$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

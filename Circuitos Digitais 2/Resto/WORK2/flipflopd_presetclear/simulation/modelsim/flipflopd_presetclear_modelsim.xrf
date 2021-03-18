@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/Work2/flipflopd_presetclear/flipflopd_presetclear.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work2/flipflopd_presetclear/flipflopd_presetclear.vwf
+source_file = 1, C:/Users/Thiago/Desktop/Work2/flipflopd_presetclear/db/flipflopd_presetclear.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = FLIPFLOPD_PRESETCLEAR
+instance = comp, \CLK~I\, CLK, FLIPFLOPD_PRESETCLEAR, 1
+instance = comp, \D~I\, D, FLIPFLOPD_PRESETCLEAR, 1
+instance = comp, \PST~I\, PST, FLIPFLOPD_PRESETCLEAR, 1
+instance = comp, \CLR~I\, CLR, FLIPFLOPD_PRESETCLEAR, 1
+instance = comp, \QVBAR~3\, QVBAR~3, FLIPFLOPD_PRESETCLEAR, 1
+instance = comp, \Q~I\, Q, FLIPFLOPD_PRESETCLEAR, 1
+instance = comp, \QBAR~I\, QBAR, FLIPFLOPD_PRESETCLEAR, 1

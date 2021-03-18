@@ -1,0 +1,12 @@
+|OR_8
+A => S.IN0
+B => S.IN1
+C => S.IN1
+D => S.IN1
+E => S.IN1
+F => S.IN1
+G => S.IN1
+H => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+

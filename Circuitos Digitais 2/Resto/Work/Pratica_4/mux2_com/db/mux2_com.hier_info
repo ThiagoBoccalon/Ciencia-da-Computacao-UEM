@@ -1,0 +1,7 @@
+|mux2_com
+a => f~0.DATAB
+b => f~0.DATAA
+s => process_0~0.IN0
+f <= f~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

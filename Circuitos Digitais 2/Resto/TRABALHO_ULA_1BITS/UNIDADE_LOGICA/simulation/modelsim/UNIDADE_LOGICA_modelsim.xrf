@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/AND_2.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/NOT_1.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/OR_2.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/UNIDADE_LOGICA/db/UNIDADE_LOGICA.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/UNIDADE_LOGICA/unidade_logica.vhd
+design_name = UNIDADE_LOGICA
+instance = comp, \A~I\, A, UNIDADE_LOGICA, 1
+instance = comp, \B~I\, B, UNIDADE_LOGICA, 1
+instance = comp, \SEL~I\, SEL, UNIDADE_LOGICA, 1
+instance = comp, \Y~4\, Y~4, UNIDADE_LOGICA, 1
+instance = comp, \Y~I\, Y, UNIDADE_LOGICA, 1

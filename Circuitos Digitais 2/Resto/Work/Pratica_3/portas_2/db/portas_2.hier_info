@@ -1,0 +1,13 @@
+|portas_2
+a => process_0.IN0
+a => process_0.IN0
+a => process_0.IN0
+b => process_0.IN1
+b => process_0.IN0
+b => process_0.IN1
+f_and <= f_and.DB_MAX_OUTPUT_PORT_TYPE
+f_nand <= f_nand.DB_MAX_OUTPUT_PORT_TYPE
+f_or <= f_or.DB_MAX_OUTPUT_PORT_TYPE
+f_xnor <= f_xnor.DB_MAX_OUTPUT_PORT_TYPE
+
+

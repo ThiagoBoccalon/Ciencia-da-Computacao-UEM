@@ -1,0 +1,8 @@
+|mux2_est
+a => t1.IN0
+b => t2.IN0
+s => t0.IN0
+s => t2.IN1
+f <= f~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,4 @@
+set tool_name "ModelSim (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {Exercicio_9_DEMUX_1X4.vho Exercicio_9_DEMUX_1X4_vhd.sdo}}
+}

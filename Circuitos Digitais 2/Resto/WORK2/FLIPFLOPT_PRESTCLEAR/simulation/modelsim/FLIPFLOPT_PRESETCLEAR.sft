@@ -1,0 +1,4 @@
+set tool_name "ModelSim (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {FLIPFLOPT_PRESETCLEAR.vho FLIPFLOPT_PRESETCLEAR_vhd.sdo}}
+}

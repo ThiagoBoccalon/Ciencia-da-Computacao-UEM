@@ -1,0 +1,13 @@
+IF (saida_deco(0)= '1') THEN
+					S0 <= A_B_Cin(2) AND A_B_Cin(1); -- s0 estará recebendo A e B
+				ELSIF (saida_deco(1)= '1') then
+					S1 <= A_B_Cin(2) NAND A_B_Cin(1);
+				ELSIF (saida_deco(2)= '1') THEN
+					S2 <= A_B_Cin(2) OR A_B_Cin(1);
+				ELSIF (saida_deco(3)= '1') THEN
+					S3 <= A_B_Cin(2) NOR A_B_Cin(1);
+				ELSIF (saida_deco(4)= '1') THEN
+					S4 <= A_B_Cin(2) XOR A_B_Cin(1);
+				ELSIF (saida_deco(5)= '1') THEN
+					S5 <= A_B_Cin(2) XNOR A_B_Cin(1);
+				ELSIF (saida_deco(6)= '1') THEN

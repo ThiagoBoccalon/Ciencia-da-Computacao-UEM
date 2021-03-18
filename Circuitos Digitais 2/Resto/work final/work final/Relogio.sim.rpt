@@ -1,0 +1,516 @@
+Simulator report for Relogio
+Tue May 28 12:06:14 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 ms       ;
+; Simulation Netlist Size     ; 358 nodes    ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 6549535      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX7000S     ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 358          ;
+; Total output ports checked                          ; 358          ;
+; Total output ports with complete 1/0-value coverage ; 358          ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; Node Name                                                          ; Output Port Name                                                   ; Output Port Type ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+; |Relogio|clk                                                       ; |Relogio|clk                                                       ; out              ;
+; |Relogio|BCD_SEG_UNI[0]                                            ; |Relogio|BCD_SEG_UNI[0]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_UNI[1]                                            ; |Relogio|BCD_SEG_UNI[1]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_UNI[2]                                            ; |Relogio|BCD_SEG_UNI[2]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_UNI[3]                                            ; |Relogio|BCD_SEG_UNI[3]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_UNI[4]                                            ; |Relogio|BCD_SEG_UNI[4]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_UNI[5]                                            ; |Relogio|BCD_SEG_UNI[5]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_UNI[6]                                            ; |Relogio|BCD_SEG_UNI[6]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_DEZ[0]                                            ; |Relogio|BCD_SEG_DEZ[0]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_DEZ[1]                                            ; |Relogio|BCD_SEG_DEZ[1]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_DEZ[2]                                            ; |Relogio|BCD_SEG_DEZ[2]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_DEZ[3]                                            ; |Relogio|BCD_SEG_DEZ[3]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_DEZ[4]                                            ; |Relogio|BCD_SEG_DEZ[4]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_DEZ[5]                                            ; |Relogio|BCD_SEG_DEZ[5]                                            ; pin_out          ;
+; |Relogio|BCD_SEG_DEZ[6]                                            ; |Relogio|BCD_SEG_DEZ[6]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_UNI[0]                                            ; |Relogio|BCD_MIN_UNI[0]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_UNI[1]                                            ; |Relogio|BCD_MIN_UNI[1]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_UNI[2]                                            ; |Relogio|BCD_MIN_UNI[2]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_UNI[3]                                            ; |Relogio|BCD_MIN_UNI[3]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_UNI[4]                                            ; |Relogio|BCD_MIN_UNI[4]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_UNI[5]                                            ; |Relogio|BCD_MIN_UNI[5]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_UNI[6]                                            ; |Relogio|BCD_MIN_UNI[6]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_DEZ[0]                                            ; |Relogio|BCD_MIN_DEZ[0]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_DEZ[1]                                            ; |Relogio|BCD_MIN_DEZ[1]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_DEZ[2]                                            ; |Relogio|BCD_MIN_DEZ[2]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_DEZ[3]                                            ; |Relogio|BCD_MIN_DEZ[3]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_DEZ[4]                                            ; |Relogio|BCD_MIN_DEZ[4]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_DEZ[5]                                            ; |Relogio|BCD_MIN_DEZ[5]                                            ; pin_out          ;
+; |Relogio|BCD_MIN_DEZ[6]                                            ; |Relogio|BCD_MIN_DEZ[6]                                            ; pin_out          ;
+; |Relogio|BCD_HR_UNI[0]                                             ; |Relogio|BCD_HR_UNI[0]                                             ; pin_out          ;
+; |Relogio|BCD_HR_UNI[1]                                             ; |Relogio|BCD_HR_UNI[1]                                             ; pin_out          ;
+; |Relogio|BCD_HR_UNI[2]                                             ; |Relogio|BCD_HR_UNI[2]                                             ; pin_out          ;
+; |Relogio|BCD_HR_UNI[3]                                             ; |Relogio|BCD_HR_UNI[3]                                             ; pin_out          ;
+; |Relogio|BCD_HR_UNI[4]                                             ; |Relogio|BCD_HR_UNI[4]                                             ; pin_out          ;
+; |Relogio|BCD_HR_UNI[5]                                             ; |Relogio|BCD_HR_UNI[5]                                             ; pin_out          ;
+; |Relogio|BCD_HR_UNI[6]                                             ; |Relogio|BCD_HR_UNI[6]                                             ; pin_out          ;
+; |Relogio|BCD_HR_DEZ[0]                                             ; |Relogio|BCD_HR_DEZ[0]                                             ; pin_out          ;
+; |Relogio|BCD_HR_DEZ[1]                                             ; |Relogio|BCD_HR_DEZ[1]                                             ; pin_out          ;
+; |Relogio|BCD_HR_DEZ[2]                                             ; |Relogio|BCD_HR_DEZ[2]                                             ; pin_out          ;
+; |Relogio|BCD_HR_DEZ[3]                                             ; |Relogio|BCD_HR_DEZ[3]                                             ; pin_out          ;
+; |Relogio|BCD_HR_DEZ[4]                                             ; |Relogio|BCD_HR_DEZ[4]                                             ; pin_out          ;
+; |Relogio|BCD_HR_DEZ[5]                                             ; |Relogio|BCD_HR_DEZ[5]                                             ; pin_out          ;
+; |Relogio|BCD_HR_DEZ[6]                                             ; |Relogio|BCD_HR_DEZ[6]                                             ; pin_out          ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~0                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~0                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~1                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~1                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~2                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~2                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~3                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~3                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~4                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~4                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~5                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~5                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~6                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~6                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~7                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~7                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~8                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~8                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~9                        ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~9                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~10                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~10                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~11                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~11                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~12                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~12                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~13                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~13                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~14                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~14                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~15                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~15                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~16                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~16                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~17                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~17                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~18                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~18                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~19                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~19                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~20                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~20                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~21                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~21                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~22                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~22                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~23                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~23                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~24                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~24                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~25                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~25                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~26                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~26                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~27                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~27                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~28                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~28                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~29                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~29                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~30                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~30                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~31                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~31                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~32                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~32                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~33                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~33                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~34                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~34                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~35                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~35                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~36                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~36                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~37                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~37                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~38                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~38                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~39                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~39                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~40                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~40                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~41                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~41                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~42                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~42                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~43                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~43                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~44                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~44                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~45                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~45                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~46                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~46                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~47                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~47                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~48                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~48                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~49                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~49                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~50                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~50                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~51                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~51                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~52                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~52                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~53                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~53                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~54                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7~54                       ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[6]                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[6]                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[5]                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[5]                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[4]                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[4]                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[3]                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[3]                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[2]                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[2]                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[1]                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[1]                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[0]                       ; |Relogio|BCD_Horas:BcdHoras|unidade_seg_7[0]                       ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~0                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~0                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~1                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~1                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~2                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~2                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~3                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~3                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~4                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~4                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~5                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~5                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~6                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~6                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~7                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~7                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~8                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~8                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~9                         ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~9                         ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~10                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~10                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~11                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~11                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~12                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~12                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~13                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~13                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~14                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~14                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~15                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~15                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~16                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~16                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~17                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~17                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~18                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~18                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~19                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~19                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~20                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~20                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~21                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7~21                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[1]                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[1]                        ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[6]                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[6]                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[5]                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[5]                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[4]                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[4]                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[3]                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[3]                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[2]                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[2]                        ; out              ;
+; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[0]                        ; |Relogio|BCD_Horas:BcdHoras|dezena_seg_7[0]                        ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~0                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~0                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~1                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~1                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~2                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~2                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~3                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~3                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~4                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~4                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~5                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~5                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~6                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~6                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~7                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~7                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~8                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~8                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~9                    ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~9                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~10                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~10                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~11                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~11                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~12                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~12                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~13                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~13                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~14                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~14                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~15                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~15                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~16                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~16                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~17                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~17                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~18                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~18                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~19                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~19                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~20                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~20                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~21                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~21                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~22                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~22                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~23                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~23                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~24                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~24                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~25                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~25                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~26                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~26                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~27                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~27                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~28                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~28                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~29                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~29                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~30                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~30                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~31                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~31                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~32                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~32                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~33                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~33                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~34                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~34                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~35                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~35                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~36                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~36                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~37                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~37                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~38                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~38                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~39                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~39                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~40                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7~40                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[6]                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[6]                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[5]                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[5]                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[4]                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[4]                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[3]                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[3]                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[2]                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[2]                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[1]                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[1]                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[0]                   ; |Relogio|BCD_Minutos:BcdMinutos|unidade_seg_7[0]                   ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~0                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~0                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~1                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~1                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~2                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~2                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~3                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~3                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~4                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~4                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~5                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~5                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~6                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~6                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~7                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~7                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~8                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~8                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~9                     ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~9                     ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~10                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~10                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~11                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~11                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~12                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~12                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~13                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~13                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~14                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~14                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~15                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~15                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~16                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7~16                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[6]                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[6]                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[5]                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[5]                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[4]                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[4]                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[3]                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[3]                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[2]                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[2]                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[1]                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[1]                    ; out              ;
+; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[0]                    ; |Relogio|BCD_Minutos:BcdMinutos|dezena_seg_7[0]                    ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~0                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~0                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~1                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~1                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~2                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~2                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~3                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~3                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~4                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~4                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~5                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~5                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~6                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~6                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~7                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~7                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~8                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~8                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~9                  ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~9                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~10                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~10                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~11                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~11                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~12                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~12                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~13                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~13                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~14                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~14                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~15                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~15                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~16                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~16                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~17                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~17                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~18                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~18                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~19                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~19                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~20                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~20                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~21                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~21                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~22                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~22                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~23                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~23                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~24                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~24                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~25                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~25                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~26                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~26                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~27                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~27                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~28                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~28                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~29                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~29                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~30                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~30                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~31                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~31                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~32                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~32                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~33                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~33                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~34                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~34                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~35                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~35                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~36                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~36                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~37                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~37                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~38                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~38                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~39                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~39                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~40                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7~40                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[6]                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[6]                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[5]                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[5]                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[4]                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[4]                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[3]                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[3]                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[2]                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[2]                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[1]                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[1]                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[0]                 ; |Relogio|BCD_Segundos:BcdSegundos|unidade_seg_7[0]                 ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~0                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~0                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~1                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~1                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~2                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~2                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~3                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~3                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~4                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~4                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~5                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~5                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~6                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~6                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~7                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~7                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~8                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~8                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~9                   ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~9                   ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~10                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~10                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~11                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~11                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~12                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~12                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~13                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~13                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~14                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~14                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~15                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~15                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~16                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7~16                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[6]                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[6]                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[5]                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[5]                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[4]                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[4]                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[3]                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[3]                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[2]                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[2]                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[1]                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[1]                  ; out              ;
+; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[0]                  ; |Relogio|BCD_Segundos:BcdSegundos|dezena_seg_7[0]                  ; out              ;
+; |Relogio|cont_mod24_horas:Horas0|clr~0                             ; |Relogio|cont_mod24_horas:Horas0|clr~0                             ; out0             ;
+; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT0|qv       ; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT0|qv       ; regout           ;
+; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT1|qv       ; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT1|qv       ; regout           ;
+; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT2|qv       ; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT2|qv       ; regout           ;
+; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT3|qv       ; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT3|qv       ; regout           ;
+; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT4|qv       ; |Relogio|cont_mod24_horas:Horas0|contadorFFT:contadorFFT4|qv       ; regout           ;
+; |Relogio|cont_mod6_minutos:Minutos1|clr~0                          ; |Relogio|cont_mod6_minutos:Minutos1|clr~0                          ; out0             ;
+; |Relogio|cont_mod6_minutos:Minutos1|contadorFFT:contadorFFT0|qv    ; |Relogio|cont_mod6_minutos:Minutos1|contadorFFT:contadorFFT0|qv    ; regout           ;
+; |Relogio|cont_mod6_minutos:Minutos1|contadorFFT:contadorFFT1|qv    ; |Relogio|cont_mod6_minutos:Minutos1|contadorFFT:contadorFFT1|qv    ; regout           ;
+; |Relogio|cont_mod6_minutos:Minutos1|contadorFFT:contadorFFT2|qv    ; |Relogio|cont_mod6_minutos:Minutos1|contadorFFT:contadorFFT2|qv    ; regout           ;
+; |Relogio|cont_mod10_minutos:Minutos0|clr~0                         ; |Relogio|cont_mod10_minutos:Minutos0|clr~0                         ; out0             ;
+; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT0|qv   ; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT0|qv   ; regout           ;
+; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT1|qv   ; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT1|qv   ; regout           ;
+; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT2|qv   ; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT2|qv   ; regout           ;
+; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT3|qv   ; |Relogio|cont_mod10_minutos:Minutos0|contadorFFT:contadorFFT3|qv   ; regout           ;
+; |Relogio|cont_mod6_segundos:Segundos1|clr~0                        ; |Relogio|cont_mod6_segundos:Segundos1|clr~0                        ; out0             ;
+; |Relogio|cont_mod6_segundos:Segundos1|contadorFFT:contadorFFT0|qv  ; |Relogio|cont_mod6_segundos:Segundos1|contadorFFT:contadorFFT0|qv  ; regout           ;
+; |Relogio|cont_mod6_segundos:Segundos1|contadorFFT:contadorFFT1|qv  ; |Relogio|cont_mod6_segundos:Segundos1|contadorFFT:contadorFFT1|qv  ; regout           ;
+; |Relogio|cont_mod6_segundos:Segundos1|contadorFFT:contadorFFT2|qv  ; |Relogio|cont_mod6_segundos:Segundos1|contadorFFT:contadorFFT2|qv  ; regout           ;
+; |Relogio|cont_mod10_segundos:Segundos0|clr~0                       ; |Relogio|cont_mod10_segundos:Segundos0|clr~0                       ; out0             ;
+; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT0|qv ; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT0|qv ; regout           ;
+; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT1|qv ; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT1|qv ; regout           ;
+; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT2|qv ; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT2|qv ; regout           ;
+; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT3|qv ; |Relogio|cont_mod10_segundos:Segundos0|contadorFFT:contadorFFT3|qv ; regout           ;
+; |Relogio|BCD_Horas:BcdHoras|Equal0~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal0~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal1~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal1~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal2~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal2~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal3~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal3~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal4~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal4~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal5~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal5~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal6~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal6~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal7~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal7~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal8~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal8~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal9~0                               ; |Relogio|BCD_Horas:BcdHoras|Equal9~0                               ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal10~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal10~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal11~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal11~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal12~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal12~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal13~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal13~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal14~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal14~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal15~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal15~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal16~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal16~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal17~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal17~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal18~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal18~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal19~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal19~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal20~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal20~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal21~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal21~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal22~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal22~0                              ; out0             ;
+; |Relogio|BCD_Horas:BcdHoras|Equal23~0                              ; |Relogio|BCD_Horas:BcdHoras|Equal23~0                              ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal0~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal0~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal1~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal1~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal2~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal2~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal3~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal3~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal4~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal4~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal5~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal5~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal6~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal6~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal7~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal7~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal8~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal8~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal9~0                           ; |Relogio|BCD_Minutos:BcdMinutos|Equal9~0                           ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal10~0                          ; |Relogio|BCD_Minutos:BcdMinutos|Equal10~0                          ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal11~0                          ; |Relogio|BCD_Minutos:BcdMinutos|Equal11~0                          ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal12~0                          ; |Relogio|BCD_Minutos:BcdMinutos|Equal12~0                          ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal13~0                          ; |Relogio|BCD_Minutos:BcdMinutos|Equal13~0                          ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal14~0                          ; |Relogio|BCD_Minutos:BcdMinutos|Equal14~0                          ; out0             ;
+; |Relogio|BCD_Minutos:BcdMinutos|Equal15~0                          ; |Relogio|BCD_Minutos:BcdMinutos|Equal15~0                          ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal0~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal0~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal1~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal1~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal2~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal2~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal3~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal3~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal4~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal4~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal5~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal5~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal6~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal6~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal7~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal7~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal8~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal8~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal9~0                         ; |Relogio|BCD_Segundos:BcdSegundos|Equal9~0                         ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal10~0                        ; |Relogio|BCD_Segundos:BcdSegundos|Equal10~0                        ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal11~0                        ; |Relogio|BCD_Segundos:BcdSegundos|Equal11~0                        ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal12~0                        ; |Relogio|BCD_Segundos:BcdSegundos|Equal12~0                        ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal13~0                        ; |Relogio|BCD_Segundos:BcdSegundos|Equal13~0                        ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal14~0                        ; |Relogio|BCD_Segundos:BcdSegundos|Equal14~0                        ; out0             ;
+; |Relogio|BCD_Segundos:BcdSegundos|Equal15~0                        ; |Relogio|BCD_Segundos:BcdSegundos|Equal15~0                        ; out0             ;
++--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue May 28 12:05:59 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Relogio -c Relogio
+Info: Using vector source file "C:/Users/Gustavo/Desktop/work/Relogio.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 6549535
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 151 megabytes
+    Info: Processing ended: Tue May 28 12:06:14 2013
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:16
+
+

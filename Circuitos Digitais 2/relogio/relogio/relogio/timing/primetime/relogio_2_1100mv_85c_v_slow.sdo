@@ -1,0 +1,7798 @@
+// Copyright (C) 1991-2010 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EP3SE50F484C2 Package FBGA484
+// 
+
+//
+// This file contains Slow Corner delays for the design using part EP3SE50F484C2,
+// with speed grade 2, core voltage 1.1V, and temperature 85 Celsius
+//
+
+// 
+// This SDF file should be used for PrimeTime (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "relogio")
+  (DATE "06/02/2013 12:18:16")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II")
+  (VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "stratixiii_io_ibuf")
+    (INSTANCE clk\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (556:560:560) (507:512:512))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[1\]\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (185:194:194) (169:178:178))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[1\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (196:206:206) (175:184:184))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|display\[1\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (139:146:146) (122:128:128))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[1\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (299:314:314) (284:298:298))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|dez\[3\]\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (192:202:202) (164:172:172))
+        (IOPATH IN1 Y (303:322:322) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|dez\[3\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (93:98:98) (79:83:83))
+        (IOPATH IN1 Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|dez\[3\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (117:123:123) (101:106:106))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE clk\~inputclkctrl.and_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (391:401:401) (416:426:426))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE change1\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (2896:3047:3047) (2791:2937:2937))
+        (IOPATH i o (1955:2100:2100) (1942:2089:2089))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE change2\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (522:549:549) (473:498:498))
+        (IOPATH i o (1981:2126:2126) (1960:2107:2107))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_seg_bcd\[0\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (2033:2139:2139) (2024:2130:2130))
+        (IOPATH i o (2064:2234:2234) (2043:2215:2215))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_seg_bcd\[1\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (2801:2948:2948) (2748:2891:2891))
+        (IOPATH i o (1955:2100:2100) (1942:2089:2089))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_seg_bcd\[2\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1890:1989:1989) (1829:1925:1925))
+        (IOPATH i o (1972:2117:2117) (1959:2106:2106))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_seg_bcd\[3\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1638:1723:1723) (1557:1639:1639))
+        (IOPATH i o (1962:2107:2107) (1949:2096:2096))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_seg_bcd\[4\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (927:975:975) (913:961:961))
+        (IOPATH i o (2086:2256:2256) (2060:2232:2232))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_seg_bcd\[5\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (882:928:928) (846:891:891))
+        (IOPATH i o (1945:2090:2090) (1932:2079:2079))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_seg_bcd\[6\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1569:1651:1651) (1514:1593:1593))
+        (IOPATH i o (2074:2244:2244) (2053:2225:2225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_seg_bcd\[0\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (497:523:523) (550:579:579))
+        (IOPATH i o (2054:2224:2224) (2033:2205:2205))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_seg_bcd\[1\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (522:550:550) (579:609:609))
+        (IOPATH i o (2054:2224:2224) (2033:2205:2205))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_seg_bcd\[2\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1691:1780:1780) (1831:1927:1927))
+        (IOPATH i o (2077:2247:2247) (2089:2261:2261))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_seg_bcd\[3\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1758:1850:1850) (1739:1830:1830))
+        (IOPATH i o (1952:2097:2097) (1939:2086:2086))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_seg_bcd\[4\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (518:546:546) (574:604:604))
+        (IOPATH i o (2106:2276:2276) (2080:2252:2252))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_seg_bcd\[5\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (3104:3267:3267) (3098:3260:3260))
+        (IOPATH i o (1955:2100:2100) (1942:2089:2089))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_seg_bcd\[6\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (546:575:575) (607:639:639))
+        (IOPATH i o (2106:2276:2276) (2080:2252:2252))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_min_bcd\[0\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (821:864:864) (844:888:888))
+        (IOPATH i o (2064:2234:2234) (2043:2215:2215))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_min_bcd\[1\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (879:925:925) (873:919:919))
+        (IOPATH i o (2106:2276:2276) (2080:2252:2252))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_min_bcd\[2\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (794:836:836) (778:819:819))
+        (IOPATH i o (2054:2224:2224) (2033:2205:2205))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_min_bcd\[3\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (791:833:833) (786:827:827))
+        (IOPATH i o (2106:2276:2276) (2080:2252:2252))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_min_bcd\[4\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1680:1768:1768) (1608:1692:1692))
+        (IOPATH i o (1955:2100:2100) (1942:2089:2089))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_min_bcd\[5\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (846:890:890) (801:843:843))
+        (IOPATH i o (2096:2266:2266) (2070:2242:2242))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_min_bcd\[6\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (834:878:878) (841:885:885))
+        (IOPATH i o (2106:2276:2276) (2080:2252:2252))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_min_bcd\[0\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1455:1531:1531) (1428:1503:1503))
+        (IOPATH i o (1955:2100:2100) (1942:2089:2089))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_min_bcd\[1\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1501:1579:1579) (1485:1562:1562))
+        (IOPATH i o (1972:2117:2117) (1959:2106:2106))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_min_bcd\[2\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (449:473:473) (459:483:483))
+        (IOPATH i o (2054:2224:2224) (2033:2205:2205))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_min_bcd\[3\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1637:1723:1723) (1552:1633:1633))
+        (IOPATH i o (2096:2266:2266) (2070:2242:2242))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_min_bcd\[4\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (2881:3032:3032) (2708:2850:2850))
+        (IOPATH i o (1982:2127:2127) (1969:2116:2116))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_min_bcd\[5\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1388:1461:1461) (1268:1335:1335))
+        (IOPATH i o (2086:2256:2256) (2060:2232:2232))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_min_bcd\[6\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (624:657:657) (618:651:651))
+        (IOPATH i o (2096:2266:2266) (2070:2242:2242))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_hora_bcd\[0\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (464:489:489) (501:527:527))
+        (IOPATH i o (2096:2266:2266) (2070:2242:2242))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_hora_bcd\[1\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1018:1071:1071) (968:1018:1018))
+        (IOPATH i o (2054:2224:2224) (2033:2205:2205))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_hora_bcd\[2\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (512:538:538) (476:501:501))
+        (IOPATH i o (2064:2234:2234) (2043:2215:2215))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_hora_bcd\[3\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (427:449:449) (466:490:490))
+        (IOPATH i o (2096:2266:2266) (2070:2242:2242))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_hora_bcd\[4\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (529:557:557) (490:516:516))
+        (IOPATH i o (2106:2276:2276) (2080:2252:2252))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_hora_bcd\[5\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (173:182:182) (170:179:179))
+        (IOPATH i o (2096:2266:2266) (2070:2242:2242))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE un_hora_bcd\[6\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (491:517:517) (516:543:543))
+        (IOPATH i o (2033:2178:2178) (2007:2154:2154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_hora_bcd\[0\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (236:248:248) (214:225:225))
+        (IOPATH i o (1991:2136:2136) (1970:2117:2117))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_hora_bcd\[1\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (173:182:182) (159:167:167))
+        (IOPATH i o (2043:2188:2188) (2017:2164:2164))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_hora_bcd\[2\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (2361:2484:2484) (2331:2453:2453))
+        (IOPATH i o (1982:2127:2127) (1969:2116:2116))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_hora_bcd\[3\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (565:594:594) (518:545:545))
+        (IOPATH i o (2064:2234:2234) (2043:2215:2215))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_hora_bcd\[4\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (502:528:528) (452:476:476))
+        (IOPATH i o (2044:2214:2214) (2023:2195:2195))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_hora_bcd\[5\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (472:497:497) (457:481:481))
+        (IOPATH i o (1991:2136:2136) (1970:2117:2117))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_obuf")
+    (INSTANCE dez_hora_bcd\[6\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (676:712:712) (720:758:758))
+        (IOPATH i o (1981:2126:2126) (1960:2107:2107))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|un\[0\]\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (321:344:344) (320:343:343))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|dez\[1\]\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (224:236:236) (222:233:233))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|dez\[1\]\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (293:308:308) (278:293:293))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|dez\[1\]\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (323:343:343) (320:343:343))
+        (IOPATH (negedge IN1) Y (321:344:344) (295:318:318))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|dez\[1\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (138:145:145) (120:126:126))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "affcn")
+    (INSTANCE P1\|dez\[1\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clrn (579:676:676) (558:651:651))
+        (PORT d (61:66:66) (67:72:72))
+        (PORT clk (1408:1462:1462) (1376:1428:1428))
+        (IOPATH (posedge clk) q (59:59:59) (59:59:59))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD clrn (posedge clk) (69:69:69) (40:40:40))
+      (SETUPHOLD d (posedge clk) (69:69:69) (40:40:40))
+      (PERIOD clk (1369:1369:1369))
+      (WIDTH clrn (1600:1600:1600))
+      (WIDTH clk (800:800:800))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|dez\[2\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (224:236:236) (222:233:233))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|dez\[2\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (260:274:274) (252:265:265))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|dez\[2\]\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (323:343:343) (295:318:318))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|dez\[2\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (137:145:145) (121:127:127))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "affcn")
+    (INSTANCE P1\|dez\[2\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clrn (579:676:676) (558:651:651))
+        (PORT d (61:66:66) (67:72:72))
+        (PORT clk (1408:1462:1462) (1376:1428:1428))
+        (IOPATH (posedge clk) q (59:59:59) (59:59:59))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD clrn (posedge clk) (69:69:69) (40:40:40))
+      (SETUPHOLD d (posedge clk) (69:69:69) (40:40:40))
+      (PERIOD clk (1369:1369:1369))
+      (WIDTH clrn (1600:1600:1600))
+      (WIDTH clk (800:800:800))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (297:313:313) (285:300:300))
+        (IOPATH IN1 Y (178:190:190) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (198:209:209) (203:213:213))
+        (IOPATH IN1 Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (211:222:222) (209:220:220))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (223:235:235) (218:229:229))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|un\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (164:173:173) (145:153:153))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (323:343:343) (320:343:343))
+        (IOPATH (negedge IN1) Y (321:344:344) (295:318:318))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|un\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (111:117:117) (94:98:98))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "affcn")
+    (INSTANCE P1\|un\[1\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clrn (579:676:676) (558:651:651))
+        (PORT d (61:66:66) (67:72:72))
+        (PORT clk (1408:1462:1462) (1376:1428:1428))
+        (IOPATH (posedge clk) q (59:59:59) (59:59:59))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD clrn (posedge clk) (69:69:69) (40:40:40))
+      (SETUPHOLD d (posedge clk) (69:69:69) (40:40:40))
+      (PERIOD clk (1369:1369:1369))
+      (WIDTH clrn (1600:1600:1600))
+      (WIDTH clk (800:800:800))
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\[2\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (280:295:295) (267:281:281))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\[2\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (323:343:343) (320:343:343))
+        (IOPATH (negedge IN1) Y (321:344:344) (295:318:318))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\[2\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (293:308:308) (279:293:293))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "affcn")
+    (INSTANCE P1\|un\[2\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clrn (579:676:676) (558:651:651))
+        (PORT d (61:66:66) (67:72:72))
+        (PORT clk (1408:1462:1462) (1376:1428:1428))
+        (IOPATH (posedge clk) q (59:59:59) (59:59:59))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD clrn (posedge clk) (69:69:69) (40:40:40))
+      (SETUPHOLD d (posedge clk) (69:69:69) (40:40:40))
+      (PERIOD clk (1369:1369:1369))
+      (WIDTH clrn (1600:1600:1600))
+      (WIDTH clk (800:800:800))
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|change\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1583:1768:1768) (1529:1724:1724))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|change\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (213:224:224) (208:218:218))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|change\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (284:299:299) (272:286:286))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|change\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (262:276:276) (255:268:268))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|change\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (167:176:176) (147:154:154))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "affcn")
+    (INSTANCE P1\|un\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clrn (579:676:676) (558:651:651))
+        (PORT d (61:66:66) (67:72:72))
+        (PORT clk (1408:1462:1462) (1376:1428:1428))
+        (IOPATH (posedge clk) q (59:59:59) (59:59:59))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD clrn (posedge clk) (69:69:69) (40:40:40))
+      (SETUPHOLD d (posedge clk) (69:69:69) (40:40:40))
+      (PERIOD clk (1369:1369:1369))
+      (WIDTH clrn (1600:1600:1600))
+      (WIDTH clk (800:800:800))
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (250:263:263) (249:262:262))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (222:234:234) (221:233:233))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (294:309:309) (282:297:297))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|un\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (323:343:343) (320:343:343))
+        (IOPATH (negedge IN1) Y (321:344:344) (295:318:318))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|un\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (129:135:135) (113:119:119))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "affcn")
+    (INSTANCE P1\|un\[3\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clrn (579:676:676) (558:651:651))
+        (PORT d (61:66:66) (67:72:72))
+        (PORT clk (1408:1462:1462) (1376:1428:1428))
+        (IOPATH (posedge clk) q (59:59:59) (59:59:59))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD clrn (posedge clk) (69:69:69) (40:40:40))
+      (SETUPHOLD d (posedge clk) (69:69:69) (40:40:40))
+      (PERIOD clk (1369:1369:1369))
+      (WIDTH clrn (1600:1600:1600))
+      (WIDTH clk (800:800:800))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~3.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (223:234:234) (217:229:229))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|process_0\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (226:238:238) (223:234:234))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|process_0\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (183:193:193) (186:196:196))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (281:296:296) (272:286:286))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|dez\[0\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (171:179:179) (149:157:157))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|dez\[0\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (323:343:343) (320:343:343))
+        (IOPATH (negedge IN1) Y (321:344:344) (295:318:318))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|dez\[0\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (116:122:122) (99:104:104))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "affcn")
+    (INSTANCE P1\|dez\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clrn (579:676:676) (558:651:651))
+        (PORT d (61:66:66) (67:72:72))
+        (PORT clk (1408:1462:1462) (1376:1428:1428))
+        (IOPATH (posedge clk) q (59:59:59) (59:59:59))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD clrn (posedge clk) (69:69:69) (40:40:40))
+      (SETUPHOLD d (posedge clk) (69:69:69) (40:40:40))
+      (PERIOD clk (1369:1369:1369))
+      (WIDTH clrn (1600:1600:1600))
+      (WIDTH clk (800:800:800))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (221:233:233) (220:232:232))
+        (IOPATH IN1 Y (303:322:322) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (221:232:232) (215:226:226))
+        (IOPATH IN1 Y (178:190:190) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|process_0\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (198:208:208) (202:212:212))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (196:206:206) (198:209:209))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (300:316:316) (287:302:302))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|process_0\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (115:121:121) (96:102:102))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|process_0\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (272:286:286) (262:276:276))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P1\|process_0\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (268:282:282) (258:271:271))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixiii_io_ibuf")
+    (INSTANCE clr\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (504:507:507) (455:458:458))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|comb\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (125:132:132) (110:115:115))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P1\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1361:1535:1535) (1243:1422:1422))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|change.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (105:111:111) (89:93:93))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|change.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (94:99:99) (81:85:85))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P1\|change.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (115:121:121) (95:100:100))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|un\[0\]\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (168:177:177) (151:159:159))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[0\]\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (990:1042:1042) (1027:1081:1081))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[0\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (116:122:122) (95:100:100))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|dez\[3\]\~0clkctrl.and_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1933:2144:2144) (1851:2077:2077))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1723:1813:1813) (1750:1841:1841))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (150:158:158) (126:133:133))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (312:328:328) (300:315:315))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[2\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (2934:3087:3087) (3025:3184:3184))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (144:151:151) (116:122:122))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1096:1129:1129) (1090:1123:1123))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1744:1835:1835) (1774:1866:1866))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|process_0\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (167:176:176) (138:145:145))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|process_0\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (150:158:158) (131:138:138))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|process_0\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (134:141:141) (124:131:131))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|process_0\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (154:162:162) (128:135:135))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|un\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (147:154:154) (127:134:134))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (447:470:470) (444:467:467))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (423:446:446) (414:435:435))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|un\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (157:165:165) (139:146:146))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[1\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (187:197:197) (166:175:175))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (130:137:137) (108:114:114))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (156:164:164) (140:147:147))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (152:160:160) (137:145:145))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (285:300:300) (262:276:276))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (255:269:269) (241:253:253))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (410:431:431) (387:407:407))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (375:395:395) (367:386:386))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|un\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (113:119:119) (98:104:104))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[3\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (193:203:203) (173:182:182))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (138:145:145) (117:123:123))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (154:162:162) (138:146:146))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (115:121:121) (95:100:100))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add0\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (291:306:306) (280:294:294))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add0\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (271:285:285) (251:264:264))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add0\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (419:440:440) (409:430:430))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[2\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (132:139:139) (112:118:118))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (166:174:174) (151:158:158))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (172:181:181) (154:162:162))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|un\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (123:130:130) (106:111:111))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|Equal9\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1120:1179:1179) (1141:1200:1200))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|Equal9\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (196:206:206) (177:186:186))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|Equal9\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (91:96:96) (76:80:80))
+        (IOPATH IN1 Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|Equal9\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (151:159:159) (134:141:141))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|change2\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1579:1764:1764) (1527:1722:1722))
+        (IOPATH IN1 Y (295:313:313) (300:319:319))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|change2\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (436:459:459) (438:461:461))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|change2\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (148:156:156) (129:135:135))
+        (IOPATH IN1 Y (149:178:178) (166:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|change2\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1725:1815:1815) (1757:1849:1849))
+        (IOPATH IN1 Y (178:248:248) (150:255:255))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|change2\~0.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (127:133:133) (118:124:124))
+        (IOPATH IN1 Y (129:138:138) (131:139:139))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|change2\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (147:155:155) (133:140:140))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|dez\[3\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (159:167:167) (138:145:145))
+        (IOPATH IN1 Y (178:190:190) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|dez\[3\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (257:270:270) (240:253:253))
+        (IOPATH IN1 Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|dez\[3\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (114:120:120) (95:100:100))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|dez\[0\]\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (167:175:175) (149:157:157))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[0\]\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (137:144:144) (116:122:122))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[0\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1125:1184:1184) (1059:1115:1115))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (144:152:152) (124:130:130))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1724:1814:1814) (1753:1845:1845))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[1\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (2947:3101:3101) (2984:3140:3140))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (137:144:144) (117:123:123))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1736:1827:1827) (1763:1855:1855))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1129:1164:1164) (1119:1153:1153))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (140:147:147) (119:125:125))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (133:140:140) (111:117:117))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1713:1803:1803) (1753:1844:1844))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|Add1\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (176:185:185) (158:166:166))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[3\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (2939:3093:3093) (3033:3192:3192))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (130:137:137) (109:115:115))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1709:1799:1799) (1716:1806:1806))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|dez\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1134:1170:1170) (1126:1161:1161))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|process_0\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (386:407:407) (366:385:385))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P2\|process_0\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (385:406:406) (378:398:398))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|process_0\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (451:474:474) (428:451:451))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|process_0\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (323:340:340) (334:351:351))
+        (IOPATH IN1 Y (172:183:183) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|process_0\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (432:455:455) (403:424:424))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|comb\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (107:113:113) (89:94:94))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P2\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1410:1586:1586) (1345:1530:1530))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|change2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (940:989:989) (924:972:972))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|change2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (963:1014:1014) (961:1012:1012))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P2\|change2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (243:255:255) (211:222:222))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (589:619:619) (528:556:556))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (647:681:681) (578:608:608))
+        (IOPATH (posedge IN1) Y (371:394:394) (330:351:351))
+        (IOPATH (negedge IN1) Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (683:719:719) (612:644:644))
+        (IOPATH IN1 Y (171:194:194) (184:208:208))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (595:626:626) (526:554:554))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (529:557:557) (474:499:499))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (587:618:618) (528:555:555))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (648:681:681) (584:615:615))
+        (IOPATH IN1 Y (195:207:207) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (594:625:625) (523:550:550))
+        (IOPATH IN1 Y (70:74:74) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[0\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (121:127:127) (103:109:109))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[0\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (456:485:485) (413:439:439))
+        (IOPATH (negedge IN1) Y (464:493:493) (402:428:428))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[0\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (119:125:125) (91:96:96))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[1\]\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (305:321:321) (292:307:307))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|display\[1\]\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (226:238:238) (221:233:233))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[1\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (277:292:292) (266:280:280))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[1\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (378:398:398) (372:392:392))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (569:598:598) (508:534:534))
+        (IOPATH IN1 Y (358:380:380) (335:356:356))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (665:700:700) (591:622:622))
+        (IOPATH IN1 Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (663:698:698) (584:614:614))
+        (IOPATH IN1 Y (171:194:194) (184:208:208))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (602:634:634) (542:570:570))
+        (IOPATH IN1 Y (206:219:219) (187:199:199))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (728:766:766) (644:678:678))
+        (IOPATH IN1 Y (72:77:77) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~3.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (569:598:598) (508:534:534))
+        (IOPATH (posedge IN1) Y (360:382:382) (331:352:352))
+        (IOPATH (negedge IN1) Y (352:375:375) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~3.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (665:700:700) (591:622:622))
+        (IOPATH IN1 Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (580:611:611) (519:546:546))
+        (IOPATH IN1 Y (205:218:218) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (515:541:541) (469:493:493))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (727:765:765) (644:678:678))
+        (IOPATH IN1 Y (68:72:72) (66:70:70))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (123:129:129) (107:113:113))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (168:177:177) (165:174:174))
+        (IOPATH (posedge IN1) Y (199:212:212) (187:199:199))
+        (IOPATH (negedge IN1) Y (206:219:219) (177:188:188))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (123:130:130) (94:99:99))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|display\[2\]\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (395:416:416) (391:411:411))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[2\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (311:328:328) (300:316:316))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|display\[2\]\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (349:367:367) (341:359:359))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[2\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (366:386:386) (359:378:378))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~4.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (583:614:614) (531:559:559))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~4.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (673:708:708) (607:639:639))
+        (IOPATH (posedge IN1) Y (365:388:388) (325:346:346))
+        (IOPATH (negedge IN1) Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~4.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (568:597:597) (524:551:551))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~4.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (505:531:531) (456:480:480))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~4.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (375:395:395) (318:334:334))
+        (IOPATH IN1 Y (68:72:72) (66:70:70))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~5.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (582:613:613) (524:551:551))
+        (IOPATH IN1 Y (365:388:388) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~5.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (669:704:704) (598:629:629))
+        (IOPATH IN1 Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~5.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (653:687:687) (587:618:618))
+        (IOPATH IN1 Y (171:194:194) (184:208:208))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~5.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (543:571:571) (487:512:512))
+        (IOPATH IN1 Y (206:219:219) (187:199:199))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~5.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (375:395:395) (318:334:334))
+        (IOPATH IN1 Y (72:77:77) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (128:135:135) (109:115:115))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (97:103:103) (89:93:93))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (122:128:128) (94:99:99))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|Equal9\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (563:593:593) (502:528:528))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|Equal9\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (665:700:700) (588:619:619))
+        (IOPATH IN1 Y (365:388:388) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|Equal9\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (547:576:576) (494:520:520))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|Equal9\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (577:607:607) (507:533:533))
+        (IOPATH IN1 Y (68:72:72) (66:70:70))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~6.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (566:596:596) (507:533:533))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~6.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (667:702:702) (601:632:632))
+        (IOPATH IN1 Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~6.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (662:697:697) (590:621:621))
+        (IOPATH IN1 Y (171:194:194) (184:208:208))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~6.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (577:607:607) (513:540:540))
+        (IOPATH IN1 Y (72:77:77) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (125:131:131) (107:112:112))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (94:99:99) (86:90:90))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (117:123:123) (91:95:95))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~7.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (563:593:593) (502:528:528))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~7.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (665:700:700) (588:619:619))
+        (IOPATH (posedge IN1) Y (371:394:394) (330:351:351))
+        (IOPATH (negedge IN1) Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~7.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (664:698:698) (599:630:630))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~7.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (577:607:607) (507:534:534))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~8.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (584:614:614) (530:558:558))
+        (IOPATH IN1 Y (360:382:382) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~8.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (648:681:681) (580:611:611))
+        (IOPATH IN1 Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~8.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (587:618:618) (511:538:538))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~8.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (644:678:678) (578:608:608))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[4\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (127:134:134) (111:116:116))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[4\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (456:485:485) (413:439:439))
+        (IOPATH (negedge IN1) Y (464:493:493) (402:428:428))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[4\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (123:129:129) (94:99:99))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[5\]\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (301:317:317) (292:308:308))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|display\[5\]\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (384:404:404) (375:395:395))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|display\[5\]\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (365:384:384) (352:370:370))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[5\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (360:379:379) (353:372:372))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~10.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (570:599:599) (507:534:534))
+        (IOPATH IN1 Y (358:380:380) (335:356:356))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~10.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (667:702:702) (595:626:626))
+        (IOPATH IN1 Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P4\|comb\~10.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (596:628:628) (515:542:542))
+        (IOPATH IN1 Y (198:222:222) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~10.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (531:558:558) (479:504:504))
+        (IOPATH IN1 Y (206:219:219) (187:199:199))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~9.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (570:599:599) (507:534:534))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~9.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (667:702:702) (595:626:626))
+        (IOPATH IN1 Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~9.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (546:575:575) (491:517:517))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~9.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (570:600:600) (497:523:523))
+        (IOPATH IN1 Y (208:221:221) (189:201:201))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[5\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (896:943:943) (835:878:878))
+        (IOPATH (posedge IN1) Y (194:218:218) (183:200:200))
+        (IOPATH (negedge IN1) Y (175:213:213) (173:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[5\].datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (904:951:951) (859:904:904))
+        (IOPATH (posedge IN1) Y (149:159:159) (158:168:168))
+        (IOPATH (negedge IN1) Y (163:173:173) (152:162:162))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[5\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (114:120:120) (88:92:92))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~11.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (589:619:619) (528:556:556))
+        (IOPATH (posedge IN1) Y (360:382:382) (331:352:352))
+        (IOPATH (negedge IN1) Y (352:375:375) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~11.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (647:681:681) (578:608:608))
+        (IOPATH (posedge IN1) Y (365:388:388) (325:346:346))
+        (IOPATH (negedge IN1) Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~11.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (651:685:685) (587:618:618))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~11.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (595:626:626) (526:554:554))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~12.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (591:622:622) (519:546:546))
+        (IOPATH (posedge IN1) Y (360:382:382) (331:352:352))
+        (IOPATH (negedge IN1) Y (352:375:375) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~12.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (665:700:700) (596:628:628))
+        (IOPATH IN1 Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|comb\~12.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (577:607:607) (517:544:544))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P4\|comb\~12.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (633:666:666) (568:598:598))
+        (IOPATH IN1 Y (208:221:221) (189:201:201))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[6\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (228:240:240) (210:221:221))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[6\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (456:485:485) (413:439:439))
+        (IOPATH (negedge IN1) Y (464:493:493) (402:428:428))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P4\|display\[6\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (116:122:122) (90:94:94))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P5\|display\[0\]\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (956:1006:1006) (917:965:965))
+        (IOPATH IN1 Y (365:388:388) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P5\|display\[0\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (912:960:960) (894:941:941))
+        (IOPATH IN1 Y (199:212:212) (177:188:188))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P5\|display\[0\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (940:989:989) (894:941:941))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P5\|comb\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (956:1006:1006) (912:960:960))
+        (IOPATH IN1 Y (360:382:382) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P5\|comb\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (925:974:974) (905:953:953))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P5\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (936:985:985) (890:937:937))
+        (IOPATH IN1 Y (70:74:74) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|comb\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (956:1006:1006) (912:960:960))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|comb\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (908:956:956) (891:938:938))
+        (IOPATH (posedge IN1) Y (199:212:212) (187:199:199))
+        (IOPATH (negedge IN1) Y (206:219:219) (177:188:188))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|comb\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (936:985:985) (891:937:937))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P5\|Equal9\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (954:1004:1004) (914:962:962))
+        (IOPATH IN1 Y (358:380:380) (335:356:356))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P5\|Equal9\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (905:952:952) (888:934:934))
+        (IOPATH IN1 Y (199:212:212) (177:188:188))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P5\|Equal9\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (933:981:981) (889:935:935))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P5\|display\[4\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (954:1004:1004) (914:962:962))
+        (IOPATH IN1 Y (360:382:382) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|display\[4\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (922:970:970) (902:949:949))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|display\[4\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (932:981:981) (889:935:935))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|display\[5\]\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (956:1006:1006) (917:965:965))
+        (IOPATH (posedge IN1) Y (360:382:382) (331:352:352))
+        (IOPATH (negedge IN1) Y (352:375:375) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|display\[5\]\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (928:977:977) (908:956:956))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P5\|display\[5\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (939:988:988) (893:940:940))
+        (IOPATH IN1 Y (70:74:74) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|display\[6\]\~3.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (955:1005:1005) (915:963:963))
+        (IOPATH (posedge IN1) Y (363:386:386) (332:353:353))
+        (IOPATH (negedge IN1) Y (355:377:377) (326:347:347))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P5\|display\[6\]\~3.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (884:930:930) (873:919:919))
+        (IOPATH IN1 Y (163:173:173) (158:168:168))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P5\|display\[6\]\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (931:980:980) (886:933:933))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (644:677:677) (565:595:595))
+        (IOPATH IN1 Y (365:388:388) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (581:612:612) (510:537:537))
+        (IOPATH IN1 Y (371:394:394) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (690:726:726) (614:646:646))
+        (IOPATH IN1 Y (171:194:194) (184:208:208))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (555:584:584) (481:506:506))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (641:675:675) (584:615:615))
+        (IOPATH IN1 Y (358:380:380) (335:356:356))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (734:772:772) (634:667:667))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (660:695:695) (592:623:623))
+        (IOPATH (posedge IN1) Y (199:212:212) (187:199:199))
+        (IOPATH (negedge IN1) Y (206:219:219) (177:188:188))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (564:593:593) (517:544:544))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[0\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (166:175:175) (140:147:147))
+        (IOPATH (posedge IN1) Y (365:388:388) (325:346:346))
+        (IOPATH (negedge IN1) Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[0\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (94:99:99) (85:90:90))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[0\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (118:124:124) (91:96:96))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[1\]\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (295:310:310) (286:301:301))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|display\[1\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1115:1174:1174) (1139:1198:1198))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[1\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (283:298:298) (261:274:274))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[1\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (423:445:445) (416:438:438))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (644:677:677) (565:595:595))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (581:612:612) (510:537:537))
+        (IOPATH IN1 Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (598:629:629) (538:566:566))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (719:756:756) (629:662:662))
+        (IOPATH IN1 Y (208:221:221) (189:201:201))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (506:532:532) (452:476:476))
+        (IOPATH IN1 Y (70:74:74) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~3.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (659:693:693) (567:597:597))
+        (IOPATH IN1 Y (358:380:380) (335:356:356))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~3.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (734:773:773) (635:669:669))
+        (IOPATH (posedge IN1) Y (371:394:394) (330:351:351))
+        (IOPATH (negedge IN1) Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (645:679:679) (547:576:576))
+        (IOPATH IN1 Y (171:194:194) (184:208:208))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (660:694:694) (590:621:621))
+        (IOPATH (posedge IN1) Y (199:212:212) (187:199:199))
+        (IOPATH (negedge IN1) Y (206:219:219) (177:188:188))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (926:974:974) (887:933:933))
+        (IOPATH IN1 Y (72:77:77) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (132:139:139) (116:122:122))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (95:100:100) (87:91:91))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (120:127:127) (94:99:99))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|display\[2\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (584:614:614) (536:564:564))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|display\[2\]\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (731:769:769) (652:687:687))
+        (IOPATH IN1 Y (365:388:388) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[2\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (938:987:987) (901:948:948))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[2\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (734:772:772) (667:702:702))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~4.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (584:614:614) (536:564:564))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~4.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (731:769:769) (652:687:687))
+        (IOPATH (posedge IN1) Y (371:394:394) (330:351:351))
+        (IOPATH (negedge IN1) Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~4.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (711:748:748) (631:664:664))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~4.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (464:493:493) (413:439:439))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~4.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (567:597:597) (499:525:525))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~5.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (127:134:134) (108:114:114))
+        (IOPATH IN1 Y (365:388:388) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~5.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (582:613:613) (505:531:531))
+        (IOPATH IN1 Y (371:394:394) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~5.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (727:765:765) (628:661:661))
+        (IOPATH IN1 Y (171:194:194) (184:208:208))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~5.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (662:696:696) (587:618:618))
+        (IOPATH IN1 Y (206:219:219) (187:199:199))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~5.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (736:774:774) (673:708:708))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (176:186:186) (170:179:179))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (97:102:102) (88:93:93))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (119:125:125) (92:96:96))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|Equal9\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (640:674:674) (584:615:615))
+        (IOPATH IN1 Y (360:382:382) (324:344:344))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|Equal9\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (736:775:775) (629:662:662))
+        (IOPATH IN1 Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|Equal9\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (586:617:617) (521:548:548))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|Equal9\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (583:613:613) (517:544:544))
+        (IOPATH IN1 Y (68:72:72) (66:70:70))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~6.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (754:794:794) (656:691:691))
+        (IOPATH (posedge IN1) Y (365:388:388) (325:346:346))
+        (IOPATH (negedge IN1) Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~6.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (643:677:677) (565:595:595))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~6.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (662:697:697) (593:624:624))
+        (IOPATH IN1 Y (208:221:221) (189:201:201))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~6.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (570:600:600) (502:529:529))
+        (IOPATH IN1 Y (70:74:74) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[3\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (138:145:145) (121:128:128))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (456:485:485) (413:439:439))
+        (IOPATH (negedge IN1) Y (464:493:493) (402:428:428))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (145:153:153) (110:115:115))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~7.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (640:674:674) (584:615:615))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~7.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (736:775:775) (629:662:662))
+        (IOPATH (posedge IN1) Y (371:394:394) (330:351:351))
+        (IOPATH (negedge IN1) Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~7.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (679:714:714) (595:626:626))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~7.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (583:613:613) (517:544:544))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~8.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (584:615:615) (526:553:553))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~8.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (753:793:793) (637:670:670))
+        (IOPATH (posedge IN1) Y (365:388:388) (325:346:346))
+        (IOPATH (negedge IN1) Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~8.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (639:673:673) (564:594:594))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~8.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (566:596:596) (502:528:528))
+        (IOPATH IN1 Y (70:74:74) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[4\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (127:134:134) (110:116:116))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[4\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (456:485:485) (413:439:439))
+        (IOPATH (negedge IN1) Y (464:493:493) (402:428:428))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[4\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (119:126:126) (91:96:96))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|display\[5\]\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (586:617:617) (523:551:551))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|display\[5\]\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (735:773:773) (634:667:667))
+        (IOPATH IN1 Y (365:388:388) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[5\]\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (638:671:671) (580:610:610))
+        (IOPATH (posedge IN1) Y (205:218:218) (188:200:200))
+        (IOPATH (negedge IN1) Y (175:186:186) (210:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[5\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (562:591:591) (512:539:539))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~9.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (586:617:617) (523:551:551))
+        (IOPATH IN1 Y (358:380:380) (335:356:356))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~9.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (735:773:773) (634:667:667))
+        (IOPATH IN1 Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~9.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (464:493:493) (413:439:439))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~9.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (735:773:773) (677:713:713))
+        (IOPATH IN1 Y (69:73:73) (68:72:72))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~10.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (590:621:621) (529:557:557))
+        (IOPATH IN1 Y (352:375:375) (331:352:352))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~10.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (742:781:781) (644:678:678))
+        (IOPATH IN1 Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~10.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (637:671:671) (560:589:589))
+        (IOPATH IN1 Y (175:186:186) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P6\|comb\~10.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (118:124:124) (102:107:107))
+        (IOPATH IN1 Y (70:74:74) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[5\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (123:129:129) (106:111:111))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[5\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (456:485:485) (413:439:439))
+        (IOPATH (negedge IN1) Y (464:493:493) (402:428:428))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[5\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (122:128:128) (95:100:100))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~11.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (665:699:699) (596:627:627))
+        (IOPATH (posedge IN1) Y (365:388:388) (335:356:356))
+        (IOPATH (negedge IN1) Y (358:380:380) (328:348:348))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~11.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (843:887:887) (756:795:795))
+        (IOPATH (posedge IN1) Y (198:222:222) (184:208:208))
+        (IOPATH (negedge IN1) Y (171:194:194) (205:230:230))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~11.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1300:1368:1368) (1275:1342:1342))
+        (IOPATH (posedge IN1) Y (199:212:212) (187:199:199))
+        (IOPATH (negedge IN1) Y (206:219:219) (177:188:188))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~11.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (410:431:431) (352:370:370))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~12.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (845:889:889) (757:796:796))
+        (IOPATH IN1 Y (350:372:372) (330:351:351))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~12.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (508:534:534) (446:469:469))
+        (IOPATH (posedge IN1) Y (204:287:287) (196:275:275))
+        (IOPATH (negedge IN1) Y (216:273:273) (178:307:307))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P6\|comb\~12.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (535:563:563) (477:502:502))
+        (IOPATH IN1 Y (177:188:188) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|comb\~12.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (409:431:431) (351:370:370))
+        (IOPATH (posedge IN1) Y (72:77:77) (68:72:72))
+        (IOPATH (negedge IN1) Y (69:73:73) (56:60:60))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[6\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (128:135:135) (110:115:115))
+        (IOPATH (posedge IN1) Y (365:388:388) (325:346:346))
+        (IOPATH (negedge IN1) Y (344:366:366) (325:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[6\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (100:105:105) (91:96:96))
+        (IOPATH (posedge IN1) Y (195:207:207) (189:201:201))
+        (IOPATH (negedge IN1) Y (208:221:221) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P6\|display\[6\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (114:120:120) (87:92:92))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (485:510:510) (461:485:485))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (376:396:396) (380:400:400))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (371:390:390) (352:371:371))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (430:452:452) (402:423:423))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (505:532:532) (484:510:510))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (388:408:408) (388:409:409))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (386:406:406) (369:389:389))
+        (IOPATH IN1 Y (172:183:183) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (440:463:463) (411:432:432))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[0\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (108:114:114) (92:97:97))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[0\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (79:83:83) (67:70:70))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[0\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (103:108:108) (86:91:91))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (287:302:302) (269:283:283))
+        (IOPATH IN1 Y (303:322:322) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (400:421:421) (405:426:426))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (502:528:528) (482:507:507))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (369:388:388) (356:375:375))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (439:462:462) (408:430:430))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~3.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (287:302:302) (269:283:283))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~3.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (400:421:421) (405:426:426))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (462:486:486) (444:467:467))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (384:404:404) (368:387:387))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (439:462:462) (409:430:430))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (111:116:116) (92:97:97))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (83:88:88) (71:75:75))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (104:110:110) (86:91:91))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|display\[2\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (292:307:307) (279:294:294))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|display\[2\]\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (199:210:210) (179:188:188))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[2\]\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (145:153:153) (124:131:131))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[2\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (147:154:154) (128:135:135))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~4.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (496:522:522) (471:496:496))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~4.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (390:410:410) (396:416:416))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~4.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (309:325:325) (293:309:309))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~4.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (370:389:389) (354:373:373))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~4.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (426:449:449) (397:418:418))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~5.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (506:533:533) (485:511:511))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~5.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (308:324:324) (293:308:308))
+        (IOPATH IN1 Y (316:336:336) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~5.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (401:422:422) (406:428:428))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~5.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (388:409:409) (373:393:393))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~5.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (444:467:467) (414:436:436))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (112:118:118) (90:95:95))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (79:83:83) (66:70:70))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (99:104:104) (81:85:85))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|Equal9\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (487:512:512) (464:489:489))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|Equal9\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (380:400:400) (384:404:404))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|Equal9\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (387:407:407) (362:381:381))
+        (IOPATH IN1 Y (178:190:190) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|Equal9\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (431:453:453) (399:419:419))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~6.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (404:425:425) (383:403:403))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~6.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (465:490:490) (447:470:470))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~6.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (401:422:422) (406:427:427))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~6.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (443:466:466) (413:434:434))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (115:121:121) (99:104:104))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (79:83:83) (67:70:70))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (99:104:104) (82:86:86))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~7.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (387:407:407) (366:385:385))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~7.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (386:406:406) (378:398:398))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~7.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (482:508:508) (456:480:480))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~7.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (433:455:455) (402:423:423))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~8.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (495:521:521) (468:492:492))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~8.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (379:399:399) (378:398:398))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~8.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (390:410:410) (359:378:378))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~8.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (433:456:456) (395:416:416))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[4\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (199:209:209) (179:188:188))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[4\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (390:415:415) (381:405:405))
+        (IOPATH (negedge IN1) Y (387:412:412) (361:383:383))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[4\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (105:110:110) (86:90:90))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~9.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (287:302:302) (266:280:280))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~9.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (200:211:211) (191:201:201))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~9.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (315:332:332) (304:320:320))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~9.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (195:205:205) (188:197:197))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|display\[5\]\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (185:195:195) (168:177:177))
+        (IOPATH IN1 Y (316:336:336) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[5\]\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (306:322:322) (285:300:300))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[5\]\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (137:144:144) (118:125:125))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|display\[5\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (178:188:188) (159:167:167))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~10.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (202:212:212) (192:202:202))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~10.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (202:212:212) (193:203:203))
+        (IOPATH IN1 Y (149:189:189) (172:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~10.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (303:319:319) (294:310:310))
+        (IOPATH IN1 Y (135:144:144) (141:150:150))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P7\|comb\~10.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (171:180:180) (159:167:167))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[5\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (98:104:104) (81:85:85))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[5\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (103:109:109) (84:89:89))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[5\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (99:105:105) (82:86:86))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~11.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (487:512:512) (464:489:489))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~11.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (380:400:400) (384:404:404))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~11.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (373:392:392) (352:370:370))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~11.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (430:453:453) (399:420:420))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~12.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (397:418:418) (378:397:397))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P7\|comb\~12.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (399:420:420) (404:425:425))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~12.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (501:527:527) (482:507:507))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|comb\~12.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (435:458:458) (407:428:428))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[6\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (108:114:114) (93:98:98))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[6\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH (posedge IN1) Y (390:415:415) (381:405:405))
+        (IOPATH (negedge IN1) Y (387:412:412) (361:383:383))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P7\|display\[6\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (104:109:109) (87:91:91))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[0\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (364:383:383) (335:352:352))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[0\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (129:136:136) (106:112:112))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|dez\[0\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (131:137:137) (109:115:115))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (946:995:995) (980:1031:1031))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (131:137:137) (116:122:122))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|dez\[3\]\~0clkctrl.and_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (638:781:781) (570:729:729))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[1\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1783:1876:1876) (1790:1883:1883))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (127:133:133) (107:113:113))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (957:1007:1007) (980:1032:1032))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1125:1159:1159) (1109:1142:1142))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (249:262:262) (222:234:234))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (939:988:988) (975:1026:1026))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (120:127:127) (97:102:102))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[2\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1790:1883:1883) (1791:1884:1884))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (124:130:130) (101:106:106))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (916:964:964) (933:982:982))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1125:1160:1160) (1109:1142:1142))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (503:529:529) (494:520:520))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (930:978:978) (970:1021:1021))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (420:442:442) (427:449:449))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add1\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (483:508:508) (472:497:497))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[3\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (126:133:133) (102:107:107))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1884:1983:1983) (1887:1986:1986))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1008:1061:1061) (1013:1066:1066))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|dez\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1124:1158:1158) (1107:1141:1141))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|display\[4\]\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (125:132:132) (104:109:109))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|display\[4\]\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (122:128:128) (105:110:110))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|display\[4\]\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (134:141:141) (119:125:125))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add0\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (187:197:197) (165:174:174))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add0\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (191:201:201) (174:183:183))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|Add0\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (254:268:268) (230:242:242))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[2\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (130:137:137) (109:115:115))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (210:221:221) (190:200:200))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (94:99:99) (83:87:87))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (129:136:136) (108:113:113))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|un\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (236:248:248) (207:218:218))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (127:134:134) (106:112:112))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (200:210:210) (179:189:189))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (171:180:180) (155:163:163))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (242:254:254) (217:228:228))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[3\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (256:269:269) (228:240:240))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (110:116:116) (92:97:97))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (181:190:190) (161:169:169))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (246:259:259) (216:227:227))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|process_0\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (252:265:265) (226:238:238))
+        (IOPATH IN1 Y (316:336:336) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|process_0\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (200:211:211) (180:189:189))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|process_0\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (116:123:123) (99:104:104))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|process_0\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (178:187:187) (159:167:167))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (143:151:151) (125:131:131))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|un\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (116:122:122) (96:101:101))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (205:216:216) (187:197:197))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|un\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (106:111:111) (86:91:91))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[1\].dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (125:131:131) (105:110:110))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (198:209:209) (177:186:186))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (89:94:94) (76:80:80))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (135:142:142) (110:116:116))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|un\[3\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (113:119:119) (94:99:99))
+        (IOPATH IN1 Y (305:324:324) (293:312:312))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|un\[3\]\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1349:1522:1522) (1357:1542:1542))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|un\[3\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (137:144:144) (122:128:128))
+        (IOPATH IN1 Y (170:190:190) (147:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P3\|un\[3\]\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (911:959:959) (945:994:994))
+        (IOPATH IN1 Y (178:248:248) (150:255:255))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|un\[3\]\~1.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (108:114:114) (93:98:98))
+        (IOPATH IN1 Y (135:144:144) (141:150:150))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|un\[3\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (246:259:259) (218:230:230))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P3\|un\[0\]\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (130:137:137) (112:118:118))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[0\]\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (903:950:950) (940:990:990))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P3\|un\[0\]\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (194:204:204) (176:185:185))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (813:855:855) (815:858:858))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (583:614:614) (557:587:587))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (501:528:528) (481:507:507))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (406:428:428) (407:429:429))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (527:554:554) (511:538:538))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (520:547:547) (508:535:535))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (527:554:554) (507:533:533))
+        (IOPATH IN1 Y (178:190:190) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (796:838:838) (800:842:842))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[0\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (161:169:169) (140:148:148))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[0\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (149:156:156) (136:143:143))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[0\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (101:106:106) (83:88:88))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[1\]\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (527:554:554) (511:538:538))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[1\]\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (520:547:547) (508:535:535))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|display\[1\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (562:592:592) (535:563:563))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[1\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (796:837:837) (800:842:842))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~3.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (814:856:856) (814:857:857))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~3.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (580:610:610) (563:593:593))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (117:123:123) (100:106:106))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (521:548:548) (507:534:534))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (525:553:553) (506:532:532))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (814:856:856) (814:857:857))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (580:610:610) (563:593:593))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (535:563:563) (512:539:539))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (94:99:99) (82:86:86))
+        (IOPATH IN1 Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (396:417:417) (393:414:414))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[1\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (113:119:119) (94:99:99))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (123:129:129) (101:106:106))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (124:130:130) (102:107:107))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|display\[2\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (514:541:541) (493:518:518))
+        (IOPATH IN1 Y (303:322:322) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|display\[2\]\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (773:814:814) (779:820:820))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[2\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (542:570:570) (522:550:550))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[2\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (403:424:424) (403:424:424))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~4.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (514:541:541) (493:518:518))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~4.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (773:814:814) (779:820:820))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~4.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (577:607:607) (551:580:580))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~4.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (103:109:109) (84:89:89))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~4.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (402:424:424) (404:425:425))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~5.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (116:122:122) (96:101:101))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~5.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (529:557:557) (513:540:540))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~5.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (765:805:805) (772:813:813))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~5.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (554:583:583) (526:554:554))
+        (IOPATH IN1 Y (172:183:183) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~5.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (574:604:604) (559:589:589))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (149:157:157) (130:137:137))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (88:92:92) (74:78:78))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (101:107:107) (84:88:88))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~6.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (527:555:555) (512:539:539))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~6.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (569:599:599) (538:566:566))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~6.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (515:542:542) (499:525:525))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~6.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (797:839:839) (803:845:845))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|Equal9\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (583:614:614) (557:586:586))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|Equal9\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (811:853:853) (814:856:856))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|Equal9\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (476:500:500) (464:489:489))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|Equal9\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (406:427:427) (407:428:428))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (118:124:124) (104:109:109))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (93:97:97) (77:81:81))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (101:106:106) (83:88:88))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~7.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (526:554:554) (511:538:538))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~7.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (524:552:552) (509:535:535))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~7.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (530:558:558) (507:533:533))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~7.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (794:836:836) (801:843:843))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~8.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (526:554:554) (511:538:538))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~8.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (524:552:552) (509:535:535))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~8.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (565:595:595) (538:566:566))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~8.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (794:836:836) (802:844:844))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[4\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (107:113:113) (86:91:91))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[4\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (87:91:91) (71:74:74))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[4\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (103:109:109) (84:88:88))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|display\[5\]\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (523:551:551) (510:537:537))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|display\[5\]\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (767:807:807) (774:815:815))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[5\]\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (568:597:597) (538:566:566))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[5\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (387:407:407) (384:404:404))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~9.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (523:550:550) (510:536:536))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~9.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (527:555:555) (518:545:545))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~9.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (88:93:93) (74:78:78))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~9.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (790:832:832) (795:837:837))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~10.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (523:550:550) (510:536:536))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~10.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (527:555:555) (518:545:545))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P8\|comb\~10.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (100:106:106) (83:88:88))
+        (IOPATH IN1 Y (172:183:183) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~10.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (790:831:831) (796:838:838))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[5\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (555:584:584) (481:506:506))
+        (IOPATH (posedge IN1) Y (194:218:218) (183:200:200))
+        (IOPATH (negedge IN1) Y (175:213:213) (173:223:223))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[5\].datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (458:482:482) (406:427:427))
+        (IOPATH (posedge IN1) Y (149:159:159) (158:168:168))
+        (IOPATH (negedge IN1) Y (163:173:173) (152:162:162))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[5\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (114:120:120) (87:92:92))
+        (IOPATH (posedge IN1) Y (70:74:74) (66:70:70))
+        (IOPATH (negedge IN1) Y (68:72:72) (55:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~12.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (446:470:470) (435:458:458))
+        (IOPATH IN1 Y (295:313:313) (300:319:319))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P8\|comb\~12.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (476:500:500) (467:492:492))
+        (IOPATH IN1 Y (149:178:178) (166:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~12.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (477:502:502) (475:500:500))
+        (IOPATH (posedge IN1) Y (129:138:138) (141:150:150))
+        (IOPATH (negedge IN1) Y (135:144:144) (131:139:139))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~12.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (511:537:537) (503:529:529))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~11.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (479:504:504) (469:493:493))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~11.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (461:485:485) (454:478:478))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~11.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (489:514:514) (485:511:511))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|comb\~11.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (513:540:540) (504:530:530))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[6\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (103:109:109) (84:88:88))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[6\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (76:80:80) (63:67:67))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P8\|display\[6\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (99:105:105) (82:86:86))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (533:561:561) (527:555:555))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (815:858:858) (794:835:835))
+        (IOPATH IN1 Y (316:336:336) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (591:622:622) (575:605:605))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (477:502:502) (476:501:501))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (533:561:561) (527:555:555))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (815:858:858) (794:835:835))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (605:636:636) (585:616:616))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (477:502:502) (475:500:500))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[0\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (102:108:108) (85:90:90))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[0\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (104:109:109) (86:90:90))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[0\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (100:105:105) (83:87:87))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[1\]\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (604:635:635) (582:613:613))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[1\]\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (808:851:851) (792:833:833))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[1\]\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (629:662:662) (613:645:645))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|display\[1\]\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (484:509:509) (483:508:508))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (514:541:541) (507:533:533))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (111:116:116) (94:99:99))
+        (IOPATH IN1 Y (311:331:331) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~2.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (585:616:616) (563:592:592))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (627:660:660) (614:646:646))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (805:847:847) (789:830:830))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~3.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (514:541:541) (507:533:533))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~3.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (110:116:116) (94:99:99))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~3.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (653:687:687) (634:668:668))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (571:601:601) (553:582:582))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (804:847:847) (789:830:830))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[1\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (107:113:113) (87:92:92))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[1\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (108:114:114) (91:95:95))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[1\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (97:102:102) (80:84:84))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[2\]\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (530:558:558) (526:553:553))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[2\]\~1.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (814:856:856) (796:838:838))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|display\[2\]\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (583:614:614) (562:591:591))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|display\[2\]\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (475:500:500) (476:501:501))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~5.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (483:509:509) (481:506:506))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~5.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (814:857:857) (796:838:838))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~5.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (116:122:122) (97:102:102))
+        (IOPATH IN1 Y (172:192:192) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~5.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (746:785:785) (699:735:735))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~5.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (477:502:502) (476:501:501))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~4.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (530:558:558) (526:553:553))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~4.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (647:681:681) (628:660:660))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~4.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (597:629:629) (571:601:601))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~4.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (91:96:96) (75:79:79))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~4.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (798:840:840) (782:823:823))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[2\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (107:112:112) (87:92:92))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[2\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (127:134:134) (114:120:120))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[2\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (102:107:107) (84:88:88))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~6.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (511:538:538) (500:526:526))
+        (IOPATH IN1 Y (307:327:327) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~6.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (775:815:815) (730:768:768))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~6.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (649:683:683) (632:665:665))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~6.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (815:858:858) (804:846:846))
+        (IOPATH IN1 Y (56:60:60) (64:68:68))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|Equal9\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (126:133:133) (102:107:107))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|Equal9\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (132:139:139) (111:116:116))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|Equal9\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (107:113:113) (90:95:95))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|Equal9\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (128:135:135) (111:116:116))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[3\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (230:242:242) (199:210:210))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[3\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (441:464:464) (439:462:462))
+        (IOPATH (posedge IN1) Y (172:183:183) (168:179:179))
+        (IOPATH (negedge IN1) Y (169:180:180) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[3\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (98:103:103) (81:85:85))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~7.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (825:868:868) (811:854:854))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~7.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (660:695:695) (640:674:674))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~7.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (512:538:538) (502:528:528))
+        (IOPATH IN1 Y (149:159:159) (172:183:183))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~7.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (557:586:586) (543:571:571))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~8.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (602:633:633) (577:608:608))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~8.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (815:857:857) (796:838:838))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~8.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (643:676:676) (620:653:653))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~8.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (518:545:545) (515:542:542))
+        (IOPATH IN1 Y (172:183:183) (148:157:157))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[4\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (156:164:164) (136:144:144))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[4\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (86:90:90) (72:76:76))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[4\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (100:106:106) (84:88:88))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[5\]\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (522:549:549) (510:537:537))
+        (IOPATH (posedge IN1) Y (307:327:327) (305:324:324))
+        (IOPATH (negedge IN1) Y (299:318:318) (296:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[5\]\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (826:869:869) (810:852:852))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|display\[5\]\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (575:606:606) (554:583:583))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|display\[5\]\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (485:510:510) (488:514:514))
+        (IOPATH IN1 Y (61:65:65) (51:55:55))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~10.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (492:518:518) (479:505:505))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~10.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (503:529:529) (494:520:520))
+        (IOPATH IN1 Y (288:307:307) (298:317:317))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~10.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (407:429:429) (417:439:439))
+        (IOPATH IN1 Y (172:183:183) (171:182:182))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE P9\|comb\~10.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (399:420:420) (393:413:413))
+        (IOPATH IN1 Y (59:62:62) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~9.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (495:521:521) (480:505:505))
+        (IOPATH IN1 Y (299:318:318) (305:324:324))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~9.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (503:529:529) (494:520:520))
+        (IOPATH IN1 Y (293:312:312) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~9.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (407:428:428) (399:420:420))
+        (IOPATH IN1 Y (145:163:163) (169:189:189))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~9.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (424:446:446) (427:449:449))
+        (IOPATH IN1 Y (169:180:180) (168:179:179))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[5\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (104:109:109) (85:89:89))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[5\].datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (77:81:81) (64:67:67))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[5\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (100:105:105) (82:87:87))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~11.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (522:549:549) (510:537:537))
+        (IOPATH (posedge IN1) Y (303:322:322) (301:320:320))
+        (IOPATH (negedge IN1) Y (295:313:313) (292:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~11.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (826:869:869) (810:852:852))
+        (IOPATH (posedge IN1) Y (311:331:331) (298:317:317))
+        (IOPATH (negedge IN1) Y (288:307:307) (293:311:311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~11.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (590:621:621) (564:593:593))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~11.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (485:510:510) (488:513:513))
+        (IOPATH (posedge IN1) Y (59:62:62) (62:66:66))
+        (IOPATH (negedge IN1) Y (55:59:59) (50:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~12.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (597:628:628) (568:598:598))
+        (IOPATH IN1 Y (295:313:313) (301:320:320))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~12.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (528:556:556) (524:551:551))
+        (IOPATH (posedge IN1) Y (178:190:190) (172:183:183))
+        (IOPATH (negedge IN1) Y (149:159:159) (188:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|comb\~12.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (619:651:651) (605:636:636))
+        (IOPATH (posedge IN1) Y (172:183:183) (171:182:182))
+        (IOPATH (negedge IN1) Y (172:183:183) (145:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE P9\|comb\~12.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (804:846:846) (791:832:832))
+        (IOPATH IN1 Y (55:59:59) (62:66:66))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[6\].datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (155:164:164) (141:149:149))
+        (IOPATH (posedge IN1) Y (316:336:336) (301:320:320))
+        (IOPATH (negedge IN1) Y (293:312:312) (297:315:315))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[6\].datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (110:115:115) (91:96:96))
+        (IOPATH (posedge IN1) Y (172:192:192) (169:189:189))
+        (IOPATH (negedge IN1) Y (145:163:163) (184:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "NUBUF")
+    (INSTANCE P9\|display\[6\].dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (102:107:107) (85:89:89))
+        (IOPATH (posedge IN1) Y (61:65:65) (64:68:68))
+        (IOPATH (negedge IN1) Y (56:60:60) (51:55:55))
+      )
+    )
+  )
+)

@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 2/Exercicio_6/Exercicio_6.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/Listas de Exercicios/Lista 2/Exercicio_6/db/Exercicio_6.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = exercicio_6
+instance = comp, \i0~I\, i0, exercicio_6, 1
+instance = comp, \i1~I\, i1, exercicio_6, 1
+instance = comp, \s1~2\, s1~2, exercicio_6, 1
+instance = comp, \i2~I\, i2, exercicio_6, 1
+instance = comp, \s2~1\, s2~1, exercicio_6, 1
+instance = comp, \s1~I\, s1, exercicio_6, 1
+instance = comp, \s2~I\, s2, exercicio_6, 1

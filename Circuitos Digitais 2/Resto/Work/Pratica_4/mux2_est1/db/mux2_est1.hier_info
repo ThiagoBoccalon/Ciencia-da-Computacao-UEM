@@ -1,0 +1,31 @@
+|mux2_est1
+a => and_2:p2.y
+b => and_2:p3.y
+s => not_1:p1.x
+s => and_2:p3.x
+f <= or_2:p4.z
+
+
+|mux2_est1|not_1:p1
+x => z~0.IN0
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux2_est1|and_2:p2
+x => z~0.IN0
+y => z~0.IN1
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux2_est1|and_2:p3
+x => z~0.IN0
+y => z~0.IN1
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux2_est1|or_2:p4
+x => z~0.IN0
+y => z~0.IN1
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

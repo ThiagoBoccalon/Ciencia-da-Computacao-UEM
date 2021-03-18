@@ -1,0 +1,43 @@
+|Deco2TO4
+s1 => not_1:p2.x
+s0 => not_1:p1.x
+d3 <= and_2:p6.z
+d2 <= and_2:p5.z
+d1 <= and_2:p4.z
+d0 <= and_2:p3.z
+
+
+|Deco2TO4|not_1:p1
+x => z.DATAIN
+z <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Deco2TO4|not_1:p2
+x => z.DATAIN
+z <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Deco2TO4|and_2:p3
+x => z~0.IN0
+y => z~0.IN1
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Deco2TO4|and_2:p4
+x => z~0.IN0
+y => z~0.IN1
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Deco2TO4|and_2:p5
+x => z~0.IN0
+y => z~0.IN1
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Deco2TO4|and_2:p6
+x => z~0.IN0
+y => z~0.IN1
+z <= z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

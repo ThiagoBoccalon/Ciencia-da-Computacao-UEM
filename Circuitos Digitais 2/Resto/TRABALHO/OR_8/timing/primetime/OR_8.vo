@@ -1,0 +1,279 @@
+// Copyright (C) 1991-2010 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
+
+// DATE "05/14/2013 11:36:08"
+
+// 
+// Device: Altera EPM7032SLC44-5 Package PLCC44
+// 
+
+// 
+// This Verilog file should be used for PrimeTime (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module OR_8 (
+	A,
+	B,
+	C,
+	D,
+	E,
+	F,
+	G,
+	H,
+	S);
+input 	A;
+input 	B;
+input 	C;
+input 	D;
+input 	E;
+input 	F;
+input 	G;
+input 	H;
+output 	S;
+
+// Design Ports Information
+// A	=>  Location: PIN_24
+// B	=>  Location: PIN_21
+// C	=>  Location: PIN_20
+// D	=>  Location: PIN_25
+// E	=>  Location: PIN_19
+// F	=>  Location: PIN_18
+// G	=>  Location: PIN_17
+// H	=>  Location: PIN_28
+// S	=>  Location: PIN_4
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+// unknown value (1'bx) is not needed for this tool. Default to 1'b0
+assign unknown = 1'b0;
+
+// synopsys translate_off
+initial $sdf_annotate("OR_8_v.sdo");
+// synopsys translate_on
+
+wire \A~dataout ;
+wire \B~dataout ;
+wire \C~dataout ;
+wire \D~dataout ;
+wire \E~dataout ;
+wire \F~dataout ;
+wire \G~dataout ;
+wire \H~dataout ;
+wire \S~1_dataout ;
+
+wire \ALT_INV_A~dataout ;
+wire \ALT_INV_B~dataout ;
+wire \ALT_INV_C~dataout ;
+wire \ALT_INV_D~dataout ;
+wire \ALT_INV_E~dataout ;
+wire \ALT_INV_F~dataout ;
+wire \ALT_INV_G~dataout ;
+wire \ALT_INV_H~dataout ;
+
+INV \INV_INST_A~dataout  (
+	.IN1(\A~dataout ),
+	.Y(\ALT_INV_A~dataout ));
+
+INV \INV_INST_B~dataout  (
+	.IN1(\B~dataout ),
+	.Y(\ALT_INV_B~dataout ));
+
+INV \INV_INST_C~dataout  (
+	.IN1(\C~dataout ),
+	.Y(\ALT_INV_C~dataout ));
+
+INV \INV_INST_D~dataout  (
+	.IN1(\D~dataout ),
+	.Y(\ALT_INV_D~dataout ));
+
+INV \INV_INST_E~dataout  (
+	.IN1(\E~dataout ),
+	.Y(\ALT_INV_E~dataout ));
+
+INV \INV_INST_F~dataout  (
+	.IN1(\F~dataout ),
+	.Y(\ALT_INV_F~dataout ));
+
+INV \INV_INST_G~dataout  (
+	.IN1(\G~dataout ),
+	.Y(\ALT_INV_G~dataout ));
+
+INV \INV_INST_H~dataout  (
+	.IN1(\H~dataout ),
+	.Y(\ALT_INV_H~dataout ));
+
+// Location: PIN_24
+max_io \A~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\A~dataout ),
+	.padio(A));
+// synopsys translate_off
+// defparam \A~I .bus_hold = "false";
+// defparam \A~I .open_drain_output = "false";
+// defparam \A~I .operation_mode = "input";
+// defparam \A~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: PIN_21
+max_io \B~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\B~dataout ),
+	.padio(B));
+// synopsys translate_off
+// defparam \B~I .bus_hold = "false";
+// defparam \B~I .open_drain_output = "false";
+// defparam \B~I .operation_mode = "input";
+// defparam \B~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: PIN_20
+max_io \C~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\C~dataout ),
+	.padio(C));
+// synopsys translate_off
+// defparam \C~I .bus_hold = "false";
+// defparam \C~I .open_drain_output = "false";
+// defparam \C~I .operation_mode = "input";
+// defparam \C~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: PIN_25
+max_io \D~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\D~dataout ),
+	.padio(D));
+// synopsys translate_off
+// defparam \D~I .bus_hold = "false";
+// defparam \D~I .open_drain_output = "false";
+// defparam \D~I .operation_mode = "input";
+// defparam \D~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: PIN_19
+max_io \E~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\E~dataout ),
+	.padio(E));
+// synopsys translate_off
+// defparam \E~I .bus_hold = "false";
+// defparam \E~I .open_drain_output = "false";
+// defparam \E~I .operation_mode = "input";
+// defparam \E~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: PIN_18
+max_io \F~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\F~dataout ),
+	.padio(F));
+// synopsys translate_off
+// defparam \F~I .bus_hold = "false";
+// defparam \F~I .open_drain_output = "false";
+// defparam \F~I .operation_mode = "input";
+// defparam \F~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: PIN_17
+max_io \G~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\G~dataout ),
+	.padio(G));
+// synopsys translate_off
+// defparam \G~I .bus_hold = "false";
+// defparam \G~I .open_drain_output = "false";
+// defparam \G~I .operation_mode = "input";
+// defparam \G~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: PIN_28
+max_io \H~I (
+	.datain(gnd),
+	.oe(gnd),
+	.modesel(9'b101010001),
+	.dataout(\H~dataout ),
+	.padio(H));
+// synopsys translate_off
+// defparam \H~I .bus_hold = "false";
+// defparam \H~I .open_drain_output = "false";
+// defparam \H~I .operation_mode = "input";
+// defparam \H~I .weak_pull_up = "false";
+// synopsys translate_on
+
+// Location: LC1
+max_mcell \S~1 (
+	.clk(gnd),
+	.aclr(gnd),
+	.pexpin(gnd),
+	.fpin(vcc),
+	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\ALT_INV_H~dataout ,\ALT_INV_G~dataout ,\ALT_INV_F~dataout ,\ALT_INV_E~dataout ,\ALT_INV_D~dataout ,\ALT_INV_C~dataout ,
+\ALT_INV_B~dataout ,\ALT_INV_A~dataout }),
+	.pterm2({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.pterm5({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.pxor({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.pclk({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.pena({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc}),
+	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
+	.modesel(13'b0001001000010),
+	.dataout(\S~1_dataout ),
+	.pexpout());
+// synopsys translate_off
+// defparam \S~1 .operation_mode = "invert";
+// defparam \S~1 .output_mode = "comb";
+// defparam \S~1 .pexp_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_4
+max_io \S~I (
+	.datain(\S~1_dataout ),
+	.oe(vcc),
+	.modesel(9'b101010010),
+	.dataout(),
+	.padio(S));
+// synopsys translate_off
+// defparam \S~I .bus_hold = "false";
+// defparam \S~I .open_drain_output = "false";
+// defparam \S~I .operation_mode = "output";
+// defparam \S~I .weak_pull_up = "false";
+// synopsys translate_on
+
+endmodule

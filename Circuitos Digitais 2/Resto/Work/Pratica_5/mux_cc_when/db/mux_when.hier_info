@@ -1,0 +1,19 @@
+|mux_when
+ch[9] => ~NO_FANOUT~
+ch[8] => ~NO_FANOUT~
+ch[7] => s~2.DATAA
+ch[7] => s~0.OUTPUTSELECT
+ch[6] => s~1.IN0
+ch[5] => s~5.IN0
+ch[4] => s~10.IN0
+ch[3] => s~15.IN0
+ch[2] => s~20.IN0
+ch[1] => s~25.IN0
+ch[0] => s~30.IN0
+ch[0] => s~0.DATAB
+s[0] <= s~34.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s~33.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s~32.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s~31.DB_MAX_OUTPUT_PORT_TYPE
+
+

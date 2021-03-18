@@ -1,0 +1,8 @@
+|Exercicio_2_Fluxo
+Driv => ~NO_FANOUT~
+Pass => ~NO_FANOUT~
+Ing => Alarme.IN1
+Beltd => Alarme.IN0
+Alarme <= Alarme.DB_MAX_OUTPUT_PORT_TYPE
+
+

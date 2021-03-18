@@ -1,0 +1,8 @@
+|MUX_2X1
+A => Y.IN1
+B => Y.IN0
+SEL => Y.IN0
+SEL => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

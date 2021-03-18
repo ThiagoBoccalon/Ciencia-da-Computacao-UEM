@@ -1,0 +1,13 @@
+|UNIDADE_LOGICA
+A => process_0~3.IN1
+A => process_0~6.IN0
+A => process_0~8.IN0
+B => process_0~0.IN1
+B => process_0~6.IN1
+B => process_0~9.IN0
+SEL => process_0~4.IN0
+SEL => process_0~7.IN1
+SEL => process_0~11.IN1
+Y <= Y~3.DB_MAX_OUTPUT_PORT_TYPE
+
+

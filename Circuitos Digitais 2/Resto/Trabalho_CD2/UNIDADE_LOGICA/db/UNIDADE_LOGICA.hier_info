@@ -1,0 +1,15 @@
+|UNIDADE_LOGICA
+A => process_0.IN0
+A => process_0.IN0
+B => process_0.IN1
+C => process_0.IN1
+C => process_0.IN1
+E1 => process_0.IN0
+E1 => process_0.IN1
+E1 => S1.DATAIN
+E2 => process_0.IN1
+E2 => process_0.IN0
+S1 <= E1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+

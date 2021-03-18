@@ -1,0 +1,37 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+-- SUBTRATOR
+
+ENTITY SUBTRATOR IS
+	PORT(A_B_Cin: IN BIT_VECTOR (2 DOWNTO 0);
+		 S: OUT BIT;
+		 Cout: OUT BIT);
+END SUBTRATOR;
+
+-- DEVE SER FEITO UTILIZANDO OS COMANDOS WHEN ELSE
+
+ARCHITECTURE TEST_SUBTRATOR OF SUBTRATOR IS
+	BEGIN
+		-- PRIMEIRO IRÁ RECEBER A SAIDA S
+		S <= '0' WHEN A_B_Cin = "000" ELSE
+			 '1' WHEN A_B_Cin = "001" ELSE
+			 '1' WHEN A_B_Cin = "010" ELSE
+			 '0' WHEN A_B_Cin = "011" ELSE
+			 '1' WHEN A_B_Cin = "100" ELSE
+			 '0' WHEN A_B_Cin = "101" ELSE
+		     '0' WHEN A_B_Cin = "110" ELSE
+			 '1' WHEN A_B_Cin = "111";
+				  
+		Cout <= '0' WHEN A_B_Cin = "000" ELSE
+			    '1' WHEN A_B_Cin = "001" ELSE
+				'1' WHEN A_B_Cin = "010" ELSE
+				'1' WHEN A_B_Cin = "011" ELSE
+				'0' WHEN A_B_Cin = "100" ELSE
+				'0' WHEN A_B_Cin = "101" ELSE
+				'0' WHEN A_B_Cin = "110" ELSE
+				'1' WHEN A_B_Cin = "111";
+END TEST_SUBTRATOR;
+	
+		  
+		

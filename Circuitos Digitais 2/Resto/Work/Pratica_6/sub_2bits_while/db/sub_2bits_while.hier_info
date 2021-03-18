@@ -1,0 +1,21 @@
+|sub_2bits_while
+A[0] => LessThan0.IN2
+A[0] => S~3.IN0
+A[0] => couti~0.IN0
+A[1] => LessThan0.IN1
+A[1] => S~4.IN0
+A[1] => couti~2.IN0
+B[0] => LessThan0.IN4
+B[0] => S~3.IN1
+B[0] => couti~1.IN1
+B[1] => LessThan0.IN3
+B[1] => S~4.IN1
+B[1] => couti~3.IN1
+B[1] => couti~6.IN1
+cin => ~NO_FANOUT~
+S[0] <= S[0]~2.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1]~0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~0.DB_MAX_OUTPUT_PORT_TYPE
+Erro <= Erro$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

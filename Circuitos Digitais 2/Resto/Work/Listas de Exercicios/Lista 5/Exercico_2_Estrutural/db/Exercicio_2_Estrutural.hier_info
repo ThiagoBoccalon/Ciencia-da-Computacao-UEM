@@ -1,0 +1,80 @@
+|Exercicio_2_Estrutural
+Driv => not_1:P1.A
+Driv => And_4:P6.A
+Driv => And_4:P7.A
+Pass => not_1:P2.A
+Pass => And_4:P5.B
+Pass => And_4:P7.B
+Ing => And_4:P4.C
+Ing => And_4:P5.C
+Ing => And_4:P6.C
+Ing => And_4:P7.C
+Beltd => not_1:P3.A
+Alarme <= Or_2:P10.S1
+
+
+|Exercicio_2_Estrutural|not_1:P1
+A => Z~0.IN0
+Z <= Z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|not_1:P2
+A => Z~0.IN0
+Z <= Z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|not_1:P3
+A => Z~0.IN0
+Z <= Z~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|And_4:P4
+A => S1~0.IN0
+B => S1~0.IN1
+C => S1~1.IN1
+D => S1~2.IN1
+S1 <= S1~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|And_4:P5
+A => S1~0.IN0
+B => S1~0.IN1
+C => S1~1.IN1
+D => S1~2.IN1
+S1 <= S1~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|And_4:P6
+A => S1~0.IN0
+B => S1~0.IN1
+C => S1~1.IN1
+D => S1~2.IN1
+S1 <= S1~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|And_4:P7
+A => S1~0.IN0
+B => S1~0.IN1
+C => S1~1.IN1
+D => S1~2.IN1
+S1 <= S1~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|Or_2:P8
+A => S1~0.IN0
+B => S1~0.IN1
+S1 <= S1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|Or_2:P9
+A => S1~0.IN0
+B => S1~0.IN1
+S1 <= S1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_2_Estrutural|Or_2:P10
+A => S1~0.IN0
+B => S1~0.IN1
+S1 <= S1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

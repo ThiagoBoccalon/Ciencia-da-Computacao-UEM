@@ -1,0 +1,8 @@
+|Exercicio_2
+Driv => process_0.IN0
+Pass => process_0.IN0
+Ing => process_0.IN1
+Ing => process_0.IN1
+Beltp <= Beltp$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

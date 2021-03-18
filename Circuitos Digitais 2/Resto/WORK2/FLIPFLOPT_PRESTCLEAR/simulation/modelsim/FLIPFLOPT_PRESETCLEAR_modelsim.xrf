@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/Work2/FLIPFLOPT_PRESTCLEAR/FLIPFLOPT_PRESETCLEAR.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work2/FLIPFLOPT_PRESTCLEAR/db/FLIPFLOPT_PRESETCLEAR.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = FLIPFLOPT_PRESETCLEAR
+instance = comp, \CLK~I\, CLK, FLIPFLOPT_PRESETCLEAR, 1
+instance = comp, \T~I\, T, FLIPFLOPT_PRESETCLEAR, 1
+instance = comp, \PST~I\, PST, FLIPFLOPT_PRESETCLEAR, 1
+instance = comp, \CLR~I\, CLR, FLIPFLOPT_PRESETCLEAR, 1
+instance = comp, \Q~I\, Q, FLIPFLOPT_PRESETCLEAR, 1
+instance = comp, \QBAR~I\, QBAR, FLIPFLOPT_PRESETCLEAR, 1

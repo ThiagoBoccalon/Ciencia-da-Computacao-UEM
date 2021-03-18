@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/Desktop/Work/flipflopjk/FLIPFLOPJK.vhd
+source_file = 1, C:/Users/Thiago/Desktop/Work/flipflopjk/FLIPFLOPJK.vwf
+source_file = 1, C:/Users/Thiago/Desktop/Work/flipflopjk/Waveform1.vwf
+source_file = 1, C:/Users/Thiago/Desktop/Work/flipflopjk/db/FLIPFLOPJK.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = FLIPFLOPJK
+instance = comp, \CLK~I\, CLK, FLIPFLOPJK, 1
+instance = comp, \J~I\, J, FLIPFLOPJK, 1
+instance = comp, \K~I\, K, FLIPFLOPJK, 1
+instance = comp, \Q~I\, Q, FLIPFLOPJK, 1
+instance = comp, \QBAR~I\, QBAR, FLIPFLOPJK, 1

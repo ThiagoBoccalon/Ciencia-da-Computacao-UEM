@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="CONT_MOD4_EX1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|CONT_MOD4_EX1|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_lnh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

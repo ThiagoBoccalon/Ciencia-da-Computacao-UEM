@@ -1,0 +1,70 @@
+|Exercicio_1_Estrutural
+Re => Not_1:P1.E1
+Re => Not_1:P3.E1
+Vr => Not_1:P4.E1
+Vr => And_2_Porta:P6.A
+Vr => And_2_Porta:p7.A
+As => Not_1:P5.E1
+As => And_2_Porta:p8.A
+Se => And_2_Porta:p9.A
+Sre <= Not_1:P2.S3
+Svr <= And_2_Porta:P6.S0
+Sas <= And_2_Porta:p8.S0
+Sse <= And_2_Porta:P10.S0
+
+
+|Exercicio_1_Estrutural|Not_1:P1
+E1 => S3.IN0
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|Not_1:P2
+E1 => S3.IN0
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|Not_1:P3
+E1 => S3.IN0
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|Not_1:P4
+E1 => S3.IN0
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|Not_1:P5
+E1 => S3.IN0
+S3 <= S3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|And_2_Porta:P6
+a => S0.IN0
+b => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|And_2_Porta:p7
+a => S0.IN0
+b => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|And_2_Porta:p8
+a => S0.IN0
+b => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|And_2_Porta:p9
+a => S0.IN0
+b => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Exercicio_1_Estrutural|And_2_Porta:P10
+a => S0.IN0
+b => S0.IN1
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+

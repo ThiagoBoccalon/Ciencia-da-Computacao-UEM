@@ -1,0 +1,11 @@
+|flipflopd_presetclear
+PST => process_0~0.IN0
+PST => QV~0.IN1
+CLR => process_0~1.IN0
+CLK => process_0~2.IN0
+D => QVBAR~1.IN0
+D => QV.DATAIN
+Q <= QV.DB_MAX_OUTPUT_PORT_TYPE
+QBAR <= QVBAR.DB_MAX_OUTPUT_PORT_TYPE
+
+

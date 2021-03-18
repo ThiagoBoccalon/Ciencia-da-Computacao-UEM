@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/AND_2.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/NOT_1.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/OR_2.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/MUX_2X1/MUX_2X1.vhd
+source_file = 1, C:/Users/Thiago/SkyDrive/UEM/Circuitos Digitais 2/TRABALHO_ULA_1BITS/MUX_2X1/db/MUX_2X1.cbx.xml
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/91sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = MUX_2X1
+instance = comp, \B~I\, B, MUX_2X1, 1
+instance = comp, \SEL~I\, SEL, MUX_2X1, 1
+instance = comp, \A~I\, A, MUX_2X1, 1
+instance = comp, \Y~5\, Y~5, MUX_2X1, 1
+instance = comp, \Y~I\, Y, MUX_2X1, 1

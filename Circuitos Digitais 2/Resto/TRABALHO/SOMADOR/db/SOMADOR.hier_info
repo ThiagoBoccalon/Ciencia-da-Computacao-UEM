@@ -1,0 +1,11 @@
+|SOMADOR
+A_B_Cin[0] => Mux0.IN10
+A_B_Cin[1] => Mux0.IN9
+A_B_Cin[2] => Mux0.IN8
+TV[0] => Mux1.IN10
+TV[1] => Mux1.IN9
+TV[2] => Mux1.IN8
+C_Out <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

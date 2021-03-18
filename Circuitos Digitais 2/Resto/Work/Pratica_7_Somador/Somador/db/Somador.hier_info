@@ -1,0 +1,51 @@
+|Somador
+A => and_2:P3.x
+A => and_2:P4.x
+A => xor_2:P5.x
+B => xor_2:P1.x
+B => and_2:P2.x
+B => and_2:P3.y
+Cin => xor_2:P1.y
+Cin => and_2:P2.y
+Cin => and_2:P4.y
+S <= xor_2:P5.z
+Cout <= or_3:P6.z
+
+
+|Somador|xor_2:P1
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|and_2:P2
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|and_2:P3
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|and_2:P4
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|xor_2:P5
+x => z.IN0
+y => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Somador|or_3:P6
+x => z.IN0
+y => z.IN1
+w => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

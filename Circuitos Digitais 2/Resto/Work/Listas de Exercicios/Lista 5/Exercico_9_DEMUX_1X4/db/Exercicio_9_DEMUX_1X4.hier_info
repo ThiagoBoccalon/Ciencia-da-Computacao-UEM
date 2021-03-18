@@ -1,0 +1,16 @@
+|Exercicio_9_DEMUX_1X4
+A => process_0.IN0
+A => process_0.IN1
+B => process_0.IN0
+B => process_0.IN1
+E0 => process_0.IN1
+E0 => S4$latch.DATAIN
+E0 => S3$latch.DATAIN
+E0 => S2$latch.DATAIN
+E0 => S1$latch.DATAIN
+S1 <= S1$latch.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2$latch.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3$latch.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= S4$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

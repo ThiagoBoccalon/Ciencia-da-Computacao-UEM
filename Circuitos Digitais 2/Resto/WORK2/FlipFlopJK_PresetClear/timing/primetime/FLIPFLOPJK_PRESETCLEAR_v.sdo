@@ -1,0 +1,167 @@
+// Copyright (C) 1991-2010 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EPM7032SLC44-5 Package PLCC44
+// 
+
+// 
+// This SDF file should be used for PrimeTime (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "FLIPFLOPJK_PRESETCLEAR")
+  (DATE "05/15/2013 10:09:08")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II")
+  (VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE CLK\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1200:1200:1200) (1200:1200:1200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE K\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE J\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE PST\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1200:1200:1200) (1200:1200:1200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE CLR\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_mcell")
+    (INSTANCE QV.pcom)
+    (DELAY
+      (ABSOLUTE
+        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[1] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm3[0] (1000:1000:1000) (1000:1000:1000))
+        (IOPATH pterm1[0] regin (2600:2600:2600) (2600:2600:2600))
+        (IOPATH pterm1[1] regin (2600:2600:2600) (2600:2600:2600))
+        (IOPATH pterm3[0] regin (2600:2600:2600) (2600:2600:2600))
+        (IOPATH fbkin regin (3600:3600:3600) (3600:3600:3600))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_mcell_register")
+    (INSTANCE QV.preg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (100:100:100) (100:100:100))
+        (PORT paclr[0] (2600:2600:2600) (2600:2600:2600))
+        (PORT paclr[1] (3600:3600:3600) (3600:3600:3600))
+        (PORT papre[0] (2600:2600:2600) (2600:2600:2600))
+        (IOPATH (posedge clk) regout (1300:1300:1300) (1300:1300:1300))
+        (IOPATH (posedge paclr[0]) regout (2000:2000:2000) (2000:2000:2000))
+        (IOPATH (posedge paclr[1]) regout (2000:2000:2000) (2000:2000:2000))
+        (IOPATH (posedge papre[0]) regout (2000:2000:2000) (2000:2000:2000))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (800:800:800))
+      (HOLD datain (posedge clk) (1700:1700:1700))
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_mcell")
+    (INSTANCE QVBAR.pcom)
+    (DELAY
+      (ABSOLUTE
+        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[1] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm2[0] (1000:1000:1000) (1000:1000:1000))
+        (IOPATH pterm1[0] regin (2600:2600:2600) (2600:2600:2600))
+        (IOPATH pterm1[1] regin (2600:2600:2600) (2600:2600:2600))
+        (IOPATH pterm2[0] regin (2600:2600:2600) (2600:2600:2600))
+        (IOPATH fbkin regin (3600:3600:3600) (3600:3600:3600))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_mcell_register")
+    (INSTANCE QVBAR.preg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (100:100:100) (100:100:100))
+        (PORT clk (100:100:100) (100:100:100))
+        (PORT papre[0] (2600:2600:2600) (2600:2600:2600))
+        (PORT papre[1] (3600:3600:3600) (3600:3600:3600))
+        (IOPATH (posedge clk) regout (1300:1300:1300) (1300:1300:1300))
+        (IOPATH (posedge aclr) regout (2000:2000:2000) (2000:2000:2000))
+        (IOPATH (posedge papre[0]) regout (2000:2000:2000) (2000:2000:2000))
+        (IOPATH (posedge papre[1]) regout (2000:2000:2000) (2000:2000:2000))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (800:800:800))
+      (HOLD datain (posedge clk) (1700:1700:1700))
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE Q\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain padio (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE QBAR\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain padio (200:200:200) (200:200:200))
+      )
+    )
+  )
+)

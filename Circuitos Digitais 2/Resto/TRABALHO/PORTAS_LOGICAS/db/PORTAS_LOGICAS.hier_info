@@ -1,0 +1,32 @@
+|PORTAS_LOGICAS
+A => S.IN0
+A => S.IN0
+A => S.IN0
+A => S.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => S.IN1
+B => S.IN1
+B => S.IN1
+B => S.IN1
+E_PL[0] => S[5].IN1
+E_PL[1] => S[4].IN1
+E_PL[1] => S[5].IN0
+E_PL[2] => S[3].IN1
+E_PL[2] => S[5].IN0
+E_PL[3] => S[2].IN1
+E_PL[3] => S[5].IN0
+E_PL[4] => S[1].IN1
+E_PL[4] => S[5].IN0
+E_PL[5] => S[5].IN0
+E_PL[5] => S[0]$latch.LATCH_ENABLE
+S[0] <= S[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= S[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

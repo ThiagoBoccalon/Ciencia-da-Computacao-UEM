@@ -1,0 +1,4 @@
+set tool_name "ModelSim (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {Deco2TO4.vho Deco2TO4_vhd.sdo}}
+}

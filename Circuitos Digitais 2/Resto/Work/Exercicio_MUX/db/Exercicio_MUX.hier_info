@@ -1,0 +1,7 @@
+|Exercicio_MUX
+a => f.DATAB
+b => f.DATAA
+s => f.IN0
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

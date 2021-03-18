@@ -1,0 +1,7 @@
+|CONT_MOD4_EX1
+CLR => process_0~0.IN0
+CLK => process_0~1.IN0
+Q[0] <= CONT[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= CONT[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

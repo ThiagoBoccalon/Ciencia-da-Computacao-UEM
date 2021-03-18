@@ -1,0 +1,15 @@
+|PORTAS_LOGICAS
+E1 => process_0~0.IN0
+E1 => process_0~1.IN0
+E1 => process_0~2.IN0
+E2 => process_0~0.IN1
+E2 => process_0~1.IN1
+E2 => process_0~2.IN1
+S1 <= process_0~0.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= S2~0.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= S3~0.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= process_0~1.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= S5~0.DB_MAX_OUTPUT_PORT_TYPE
+S6 <= process_0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
