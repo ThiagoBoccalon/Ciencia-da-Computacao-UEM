@@ -1,4 +1,0 @@
-cmx.org
-Merlot
-MIT
-Stanford
