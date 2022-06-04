@@ -1,0 +1,25 @@
+C:\Users\Ricardo\Dropbox\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe.config
+C:\Users\Ricardo\Dropbox\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe
+C:\Users\Ricardo\Dropbox\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.pdb
+C:\Users\Ricardo\Dropbox\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Dropbox\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.exe
+C:\Users\Ricardo\Dropbox\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.pdb
+C:\Users\thiag\Dropbox\Arquitetura de computadores II\2017\Tomasulo C#\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe.config
+C:\Users\thiag\Dropbox\Arquitetura de computadores II\2017\Tomasulo C#\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe
+C:\Users\thiag\Dropbox\Arquitetura de computadores II\2017\Tomasulo C#\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.pdb
+C:\Users\thiag\Dropbox\Arquitetura de computadores II\2017\Tomasulo C#\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.exe
+C:\Users\thiag\Dropbox\Arquitetura de computadores II\2017\Tomasulo C#\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.pdb
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe.config
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConsoleApp\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.pdb
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csproj.AssemblyReference.cache
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csproj.CoreCompileInputs.cache
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.exe
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConsoleApp\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.pdb
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe.config
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.pdb
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csproj.AssemblyReference.cache
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csproj.CoreCompileInputs.cache
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.exe
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.pdb
