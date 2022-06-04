@@ -14,8 +14,7 @@ namespace TomasuloConsoleApp
         
 
         public LoadInMemory()
-        {
-            //Console.Write("Informe o diretório do arquivo 'Assembly': ");
+        {            
             string dir = @"C:/Assembly.txt";
             using (StreamReader reader = new StreamReader(@dir)) { 
                 while (!reader.EndOfStream)

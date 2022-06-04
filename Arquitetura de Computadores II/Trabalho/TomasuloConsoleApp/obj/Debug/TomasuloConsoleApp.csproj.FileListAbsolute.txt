@@ -19,7 +19,7 @@ D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\TomasuloConso
 D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe.config
 D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.exe
 D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\bin\Debug\TomasuloConsoleApp.pdb
-D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csproj.AssemblyReference.cache
 D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csproj.CoreCompileInputs.cache
 D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.exe
 D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.pdb
+D:\GitHub\Ciencia-da-Computacao-UEM\Arquitetura de Computadores II\Trabalho\TomasuloConsoleApp\obj\Debug\TomasuloConsoleApp.csproj.AssemblyReference.cache

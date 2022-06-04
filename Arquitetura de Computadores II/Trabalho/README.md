@@ -5,6 +5,6 @@ Trabalho desenvolvido no Sistema Operacional Windows usando Visual Studio Commun
 
 ##### Para poder executar o código em C# é necessário:
 
- - Irá abrir uma nova janela, com a seguinte frase: "Informe o diretório do arquivo 'Assembly':". Por exemplo, "C:\Users\Usuario\Tomasulo\Assembly.txt";
+ - O arquivo de leitura "Assembly.txt" deve ser colocado no seguinte diretório "C:\Assembly.txt";
 
  - Para ver o próximo ciclo, basta apertar o botão "<ENTER>".
